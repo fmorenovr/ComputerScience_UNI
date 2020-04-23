@@ -1,0 +1,4 @@
+publica vacio Principal ()
+{
+  publica clase1 instancia = nueva  clase1 ();
+}

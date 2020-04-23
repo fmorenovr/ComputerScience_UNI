@@ -1,0 +1,257 @@
+
+\documentclass[journal]{IEEEtran}
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation can
+% be obtained at: 
+% http://www.ctan.org/tex-archive/macros/latex/required/graphics/
+% Another good source of documentation is "Using Imported Graphics in
+
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{algorithm}
+\usepackage{algorithmic} 
+\usepackage{subfig}
+\usepackage{listings}
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{Cloud Computing en la Educación}
+
+\author{Moreno~Vera,~Felipe~Adrian*,\IEEEmembership{}
+        Pecho~Chávez,~Augusto**,~\IEEEmembership{}
+     	Tenorio~Trigoso,~Alonso***
+\IEEEmembership{}
+\thanks{*Carlos Munaylla, Estudiante de Ciencia de la Computación UNI (carlos.munaylla@uni.edu.pe). }
+\thanks{**Augusto Pecho, Estudiante de Ciencia de la Computación UNI (augusto.pecho@uni.edu.pe). }
+\thanks{***M.Sc. Alonso Tenorio, Profesor de Ciencia de la Computación UNI (atenoriot@uni.edu.pe). }
+}
+
+
+% The paper headers
+\markboth{Journal of Cloud Computing, May~2015}%
+{Shell \MakeLowercase{\textit{et al.}}: Cloud Computing en la Educación}
+
+
+% make the title area
+\maketitle
+
+
+\begin{abstract}
+ In this article we will provide some basics concepts about Big Data and Cyber Security in the current context, in addition we explain about the potential threats that appear next to the existence of Big Data.
+Next we explain about how the data is organized and protects and also the way we use Big Data for keep our systems secure and our information safe and the relation of this concept with Cyber Security.
+Finally we obtain a clear concept of how these two branches of research complement each other.
+\end{abstract}
+
+
+%\begin{IEEEkeywords}
+%Cloud Computing, mobile learning, u-learning, cloud storage.\\ \\
+%\end{IEEEkeywords}
+
+\textbf{Resumen--En el presente artículo brindaremos algunos conceptos básicos sobre Big Data y Cyber Security en el contexto actual, además de las amenazas potenciales que aparecen junto a la existencia de Big Data.
+A continuación veremos cómo la data se organiza y se protege, además la forma en que utilizaremos Big Data para mantener nuestros sistemas seguros e información a salvo y la relación que tiene este concepto con Cyber Security dentro de una entidad (o empresa).
+Finalmente se obtendrá un concepto claro sobre cómo estas 2 ramas de investigación se completan entre sí.}\\ \\
+
+\textbf{Keywords—big data; cyber security; risks}\\ 
+
+
+\IEEEpeerreviewmaketitle
+
+
+
+\section{Introducción}
+
+\IEEEPARstart{U}{na} Utilizar grandes cantidades de datos para gestionar las amenazas de seguridad debido a la magnitud de datos de la Internet y el hecho de que la población mundial está de manera constante en línea, se requieren proteger a los usuarios de la ciberdelincuencia que se pueden ver como un juego de números. Las mismas fuerzas que están impulsando Big Data están impulsando las amenazas al mismo tiempo. Nuevos métodos de cyber Board se necesitan  para procesar las amenazas  de la enorme cantidad de datos que surgen del mundo y mantenerse a la vanguardia de una sofisticada, agresiva y constante evolución panorámica de amenazas. Sin off-the-shelf solución puede abordar un problema de esta magnitud. La ampliación de gestionar los cambios es necesario ante el panorama de amenazas, pero se debe hacer de forma inteligente. Actualmente las compañías de seguridad de software necesitan no sólo detener los comportamientos maliciosos que ya se han iniciado, sino también predecir dicho comportamiento a futuro. Mejores Prácticas para lograr resultados finales (prototipos o interfaz GUI) para el usuario. Dirigiéndose al actual panorama de amenazas se requiere una relación sinérgica con los clientes y otras terceras partes que están expuestas constantemente a constante evolución de contenido malicioso. Una concesión de licencias, es un acuerdo que permite a los clientes a donar anónimamente datos sospechosos para su análisis y con la ingeniería inversa se puede proporcionar acceso valioso a los datos reales sobre máquinas reales que operan en el mundo real.
+
+Un ejemplo de Big Data y IA es que basándonos en datos recogidos de esta red comunitaria, los algoritmos de búsqueda especializados, aprendizaje automático, y el análisis pueden ser ejercidos sobre estos datos para identificar patrones anormales que pueden indicar una amenaza, pero eso son otros rubros.
+
+[7] Herramientas de análisis de datos grandes serán la primera línea de defensa para proporcionar programas integrales e integrados de predicción de amenaza a la seguridad, detección y disuasión y prevención de acuerdo a recientes predicciones por el Instituto Internacional de Análisis (IIA).
+
+FBR Capital Markets predice un aumento del 20\% en el "gasto de la seguridad cibernética de próxima generación" en el 2015, ya que las empresas se mueven más allá de los proveedores de cortafuegos y puntos finales tradicionales para la nube y soluciones de big data.
+
+Alrededor del 10\% de las empresas y agencias gubernamentales han actualizado a software de seguridad de última generación, tales como servidores de seguridad que detectan y bloquean las amenazas a nivel de aplicación, o grandes servicios de análisis de datos orientados a la seguridad, dijo el director gerente de FBR Capital Markets y Analista Senior de Investigación, Daniel Ives. "El mercado de esas herramientas de software podría ser de 15 mil millones dolares a 20 mil millones dolares durante los próximos tres años", añadió Ives.
+
+[8] Los 5 peores riesgos de big Data, donde expone los 5 grandes riesgos que se presentan cuando la cantidad de datos en internet crecen y crecen sin un limite, las predicciones de los riesgos fueron realizadas por la organizacion EPIC.
+¿Quiénes son los vendedores se aprovechan del análisis de grandes datos?
+A. IBM en análisis de seguridad cibernética
+IBM se llama a sí mismo el tercer jugador software de seguridad más grande en el mundo. Gartner lo ha calificado como el mayor proveedor de ventas de seguridad exclusivamente a empresas. IBM Security enfatiza la importancia de la analítica de cyber seguridad a sus clientes.
+
+"IBM está marcando el comienzo de una era de inteligencia impulsada por la seguridad de nuestros clientes", dice Brendan Hannigan, gerente general de IBM Security. "Con la tasa, el ritmo y la sofisticación de los ataques cibernéticos creciendo de manera exponencial, la seguridad se ha convertido en un problema de big data. El análisis en tiempo real es requerido como fundamento de la estrategia de seguridad de hoy en día. Socios de IBM con nuestros clientes a través de su C-Suite y Línea de Negocio desarrollan estrategias integradas e integrales de protección basada en análisis ", añade Hannigan.
+B. Splunk para la seguridad y fraude
+Splunk fue uno de los primeros motores en el gran espacio de análisis de seguridad de datos - y, como consecuencia, reclama una impresionante lista de clientes que utilizan su software para la seguridad y el fraude, incluyendo Adobe, Autodesk, Domino Pizza, First Data, Nordstrom, SAIC, Yahoo!, y muchos otros.
+
+Hay más de 200 aplicaciones de seguridad y complementos desarrollados por Splunk, sus socios o miembros de la comunidad para proporcionar información rápida en muchas de las tecnologías de seguridad líderes de la industria.
+
+Las líneas entre el análisis de seguridad y otros sectores de la seguridad están empezando a diferenciarse. Los vendedores con soluciones en torno a la red y el punto final de seguridad, inteligencia de amenazas, malware, identidad y autenticación, y otros, están alimentando datos en las plataformas de análisis. Blue Coat, Cisco, FireEye, Palo Alto Networks, Symantec, Tanium, y otros ofrecen ahora Splunk Apps.
+C. Actividad inversora
+Los CVs [6] están en el juego de análisis de grandes datos, y aquí está parte de su reciente flujo de operaciones:
+
+Sqrrl, un proveedor de análisis de datos grandes para identificar y responder a las amenazas cibernéticas, recaudó 7 millones de dolares en la Serie B, dirigido por el Rally Ventures, junto con Atlas Venture y Matrix Partners. La compañía también dio a conocer un nuevo software destinado a detectar y responder a las amenazas de ciberseguridad. La financiación total hasta la fecha es ahora 14.200.000 de dolares.
+
+Endgame, un desarrollador de inteligencia y análisis de seguridad herramientas, recaudó 30 millones de dolares en una tercera ronda. La ronda fue co-liderada por nuevos inversores Edgemore Capital y Top Tier Capital Partners. Partidarios anteriores Bessemer Venture Partners, Paladin Capital Group, Columbia Capital y Kleiner Perkins Caufield \& Byers también participaron, además de Savano Capital Partners.
+
+DB Networks, un proveedor de seguridad cibernética que aprovecha el aprendizaje automático y el análisis del comportamiento, recaudó 17 millones de dolares en nuevos fondos de capital riesgo. La ronda fue liderada por Grotech Ventures, y acompañado por Khosla Ventures y Citi Ventures.
+
+Rapid7, un proveedor de software de seguridad y los servicios de análisis, cerró 30 millones de dolares en fondos de Bain Capital y Technology Crossover Ventures. Rapid7 ha elegido a Morgan Stanley y Barclays para ayudar con una oferta pública inicial, según Reuters.
+D. Nuevos entrantes
+La expectativa de ver un incremento de “jugadores” netos en big data y proveedores de inteligencia de negocios como los análisis de seguridad cibernética en el mercado aumenta.
+
+Hortonworks, una plataforma de código abierto para el almacenamiento y análisis de datos grandes, recaudó 100 millones de dolares en su salida a bolsa con una capitalización de mercado inicial de 666 millones de dolares. Sqrrl y Hortonworks van conjuntamente al mercado para proporcionar una plataforma de segura de big data basada en las capacidades de sus tecnologías complementarias.
+
+El más notable recién llegado al mercado es SAS Institute. La compañía de 3 billones de dolares líder en el mercado de software de Business Analytics anunció recientemente su plataforma SAS Cybersecurity.
+
+\section{Big Data
+Hoy en dia el entorno impone las tres Vs de Big Data: volumen, variedad y velocidad.}
+
+Cada uno de éstos está aumentando a una velocidad asombrosa y ha requerido un cambio en cómo los proveedores de seguridad gestionan amenazas.
+
+\subsection{Volumen: Una amenaza creciente Paisaje}
+
+El panorama de las amenazas está evolucionando de varias maneras, incluyendo el crecimiento en el volumen de amenazas. En la década de 1990, el usuario de la computadora personal en promedio recibio uno o dos mensajes de spam al día. En agosto de 2010, se estimó la cantidad de spam que alrededor de 200 mil millones de mensajes de spam enviados por día. Aumentos similares son características de las transferencias de archivos y el accseo a una página Web. En enero de 2008, la industria vio más malware en un mes que se había visto en los 15 años anteriores juntos. Trend Micro estima que el panorama de las amenazas para los usuarios finales ha experimentado un incremento de seis a siete órdenes de magnitud por encima sólo de los últimos años. Los números son desalentadores, pero esto es sólo la punta del iceberg. El cambio de protocolo de Internet actualmente en curso (de IPv4 a IPv6) está proporcionando los cibercriminales una nueva zona de juegos para explotar. Aproximadamente cuatro mil millones de direcciones IP únicas están disponibles para su uso con IPv4. Esto es un gran número todavía manejable. Por el contrario, IPv6 está proporcionando un número casi infinito de direcciones IP. La creciente demanda de direcciones IP únicas para los dispositivos que van desde televisores inteligentes a los teléfonos desarrollo motivado de las nuevas normas de IPv6. El objetivo era generar suficientes IP direcciones para evitar la necesidad de revisar más adelante el problema. Aunque IPv6 fija un solo problema, creado al mismo tiempo una enorme oportunidad para los cibercriminales y presentó una completamente nuevo conjunto de desafíos para la industria.
+
+\subsection{Variedad: Métodos innovadores maliciosos}
+El atractivo de la ganancia financiera ha motivado a los ciberdelincuentes para implementar nuevos métodos innovadores y ser más cuidadoso con cada año que pasa. Hoy en día, los cibercriminales son sofisticados, evolucionando su oficio y herramientas en tiempo real. Por ejemplo, el malware creado hoy a menudo sufre procedimientos de control de calidad. Los cibercriminales a prueba en numerosas máquinas y sistemas operativos para asegurarse de que no pasa por la detección. Mientras tanto, las amenazas polimórficas del lado del servidor en coche rápido evolución y propagación y son indetectables con los métodos tradicionales. Un centenar de piezas de malware puede ser multiplicado en miles de diferentes maneras. Y el malware ya no está restringido a los ordenadores personales. El malware multiplataforma significa que los dispositivos móviles también están en riesgo. Para agosto de 2012, hubo ataques de malware móviles donde ya 160.000 corresponden al año. En 2011 sólo había unos pocos.
+
+\subsection{Velocidad: La fluidez de Amenazas}
+La necesidad de gestionar, mantener y procesar este gran volumen y variedad de datos de forma regular base presenta los proveedores de seguridad con un reto de velocidad sin precedentes. La fluidez de la Internet a través del tiempo se suma a la complejidad del problema. A diferencia de una dirección física, que no puede ser trasladado sin dejar evidencia significativa detrás, el cambio de direcciones IP en la Internet es trivial, rápido y difícil de rastrear. Una empresa individual o una puede moverse sin esfuerzo y rápidamente de un lugar a otro sin dejar rastro.
+
+La determinación de si un sitio web en particular o una página contiene contenido malicioso es fluida a través del tiempo así como. Los cibercriminales se transforman de manera rutinaria sitios legítimos en sitios corruptos casi al instante. En un ejemplo de muchas de estas transformaciones, a principios de 2012, los cibercriminales han instalado un iFrame de redirección en un sitio de noticias popular en los Países Bajos. Lo que había sido un sitio web legítimo que mañana infectado a miles de personas a medida que examinaba el sitio comprometida durante su almuerzo horas.
+
+
+\section{Metadata}
+En el mundo se ha estado impulsando una iniciativa de datos abiertos para mover a los gobiernos a ser un administrador de datos. El objetivo en la liberación de los datos es la de servir mejor al público y promover el crecimiento económico a través de la reutilización de este datos. La dificultad en el uso de estos datos se deriva de la falta de las descripciones de metadatos. Reutilización de datos requiere la mayor cantidad de información posible sobre la procedencia de los datos; la historia completa de los métodos utilizados para la recolección, conservación, y el análisis. Los Metadatos adecuados aumentan las posibilidades de que los conjuntos de datos sean reutilizados correctamente, llevando a conclusiones analíticas que son menos propensos a ser defectuoso. Dos mecanismos se utilizan para la integración de datos en un modelo relacional. En el modelo relacional, tablas de búsqueda se establecen para traducir a un vocabulario común para las vistas, y una correspondencia uno-a-uno se utiliza para crear claves entre las tablas.
+
+En un entorno de NoSQL, se une no son posibles las búsquedas de modo de mesa y o claves no pueden ser utilizados para la integración de datos. La conexión de datos a través de bases de datos debe residir en la lógica de consulta y debe confiar en la información externa a los conjuntos de datos. Esta lógica de metadatos debe ser utilizado para seleccionar los datos relevantes para la integración y posterior análisis, lo que implica la necesidad de que tanto la representación estándar y atributos adicionales para lograr la recuperación de datos automatizado. Un segundo enfoque se utiliza para acelerar el proceso de integración de datos para mashups manuales de diversos conjuntos de datos.
+
+A menudo envolturas XML se utilizan para encapsular los elementos de datos, con la nomenclatura para cada conjunto de datos proporcionado en la envoltura, basándose en la interpretación de usuario de los elementos de datos. Este enfoque permite una rápida integración de los datos a través de las envolturas (a diferencia de una larga integración de almacenamiento de datos), pero no es un enfoque que puede ser automatizado, ni puede ser utilizada para los conjuntos de datos de gran volumen que no pueden ser copiadas por su volumen. Incluso en un mashup, términos de envoltura (encapsulación) utilizados en los metadatos son ellos mismos objeto de interpretación, por lo que la reutilización de elementos de datos difícil. Sin metadatos referidos a la terminología estándar dominios a través aplicables bien entendidos, los diversos conjuntos de datos no se pueden integrar de forma automática. Además, los elementos integrantes deben aplicarse fuera del gran almacenamiento de datos, lo que implica que la lógica de integración debe residir en la capa de metadatos.
+
+\section{Los 5 peores riesgos de privacidad en Big Data}
+La recopilación y manipulación de grandes volúmenes de datos, como sus proponedores han estado diciendo desde hace varios años, puede dar lugar a beneficios del mundo real: Los anuncios se centraron en lo que realmente se quiere comprar; coches inteligentes que pueden llamar a una ambulancia si estás en un accidente; dispositivos portátiles o implantables que pueden monitorear su salud y notificar a su médico si algo va mal.
+Pero, también puede llevar a grandes problemas de privacidad. Por ahora salta a la vista que cuando las personas generan miles de puntos de datos todos los días - a dónde van, con quién se comunican, lo que leen y escriben, lo que compran, lo que comen, lo que ven, lo mucho que ejercen, cómo mucho duermen y más - son vulnerables a la exposición de una manera inimaginable hasta hace una generación.
+
+Pasando a enumerar los 5 riesgos en Big Data:
+\subsection{Discriminación}
+Según EPIC, en comentarios hacia the U.S. Office of Science and Technology:” el uso de análisis predictivo para el sector publico y privado, ahora puede ser usado por el gobierno y compañias para hacer determinaciones sobre la capacidad de hacer transacciones, de conseguir trabajo, separaciones o ver movimientos en tus tarjetas de credito, el uso de nuestras asociaciones en analisis predictivo para tomar decisiones hacen negativo el impacto que tenemos de manera individual inhibiendo nuestra libertad de asociación”. 
+El análisis de Big Data proporciona la capacidad para tomar decisiones discriminatorias que se hace sin la necesidad de que sea obvia o explicita las evidencias. Entonces a nivel de discriminacion se tiene que:
+El riesgo más significativo es que se utiliza para ocultar la discriminación basada en criterios ilícitos, y para justificar el impacto desigual de las decisiones sobre las poblaciones vulnerables.
+
+\subsection{Infraccion, difusion e invasion de privacidad}
+Big data, expone tus datos ante todo el mundo y cualquiera q tenga acceso a esta data, es libre de publicarla a su manera. Incluyendo casos como la empresa minorista Target y Home Depot, tambien la cadena de restaurante como PF, los mercados online como Chang o eBay, agencias gubernamentales, universidades, corporaciones en linea como AOL y el hackeo a Sony que no solo puso peliculas ineditas en la web, sino que expuso la informacion de miles de empleados, tambien los fraudes de tarjetas de creditos y la identidad de robo que es la mas comun entre todos estos puntos. Y Big data se encarga de exponer todos estos datos de los cuales pueden surgir numeroso informes de analisis.
+
+\subsection{Adios anonimato}
+Con big data, ahora es posible conectar todos los datos de una sola persona y cada vez que haya registro de alguna actividad de ella, puede ser conocida por cualquiera que tenga acceso a dicha data. Tus movimientos, transacciones, datos, podrian ser utilizados con fines maliciosos.
+Asi como el facebook, twiter y otras redes mas muestran y crean un perfil tuyo de preferencias, basta que des un “like” en un lugar equivocado o no apropiado, para que puedas ser filtrado a distintos tipos de categoria, dependiendo de tus gusto y ademas si esas categorias “no son las correctas socialmente” puede que tengas represalias hacia tu persona, e incluso si esque es una cuenta falta o una identidad doble.
+
+\subsection{Exenciones Gobierno}
+Según EPIC, "los estadounidenses están en varias bases de datos del gobierno que nunca", incluida la del FBI, que recopila información de identificación personal (PII), incluyendo nombre, alias, raza, sexo, fecha y lugar de nacimiento, número de Seguro Social, pasaporte y el número de licencia de conducir, dirección, números de teléfono, fotografías, huellas dactilares, información financiera como cuentas bancarias, el empleo y el negocio de la información y más. Sin embargo, "aunque parezca increíble, la agencia ha eximido a sí mismo de la Ley de Privacidad (de 1974) los requisitos que el FBI mantienen sólo, registros personales de los precisos, pertinentes, oportunos y completos", "junto con otras garantías de que la información requerida por la Ley de Privacidad, dijo EPIC.
+En Big Data, al conocer los datos de todo sobre todo, puede que cuando haya alguna clase de seleccion o filtracion, a la hora de concursar, o al momento de pedir algun trabajo o cualquier cargo importante en el gobierno, comunmente a esto se le llama “tener contactos” los cuales dan referencias sobre tu persona, condicion social, edad, direccion domicilio, etc.
+
+\subsection{ Falsificacion de data o rompimiento de seguridad de datos}
+En big data al haber tantas proporciones de datos, se puede expresar estos peligros a nivel de negocios:
+Numerosas empresas recogen y venden, "perfiles de los consumidores que no están claramente protegidos por los marcos legales vigentes", dijo EPIC.
+También hay poca o ninguna rendición de cuentas o incluso garantiza que la información sea exacta.
+"Los archivos de datos utilizados para el análisis de grandes datos a menudo pueden contener datos inexactos sobre las personas, los modelos de uso de datos que son incorrectos, ya que se refieren a individuos particulares, o simplemente ser defectuoso algoritmos".
+aqui se ofrece varias otras medidas individuales para reducir sus riesgos de privacidad:
+
+\subsection{Computación de Alto rendimiento}
+Las nuevas áreas de investigación requieren del uso de computación de alta performance, esto resulta más fácil de usar y con un menor costo usando los servicios de cloud computing.
+\subsection{Colaboración entre universidades}
+La colaboración en la educación ayuda a los estudiantes e investigadores académicos a crear un conjunto de recursos y partir de estos poder obtener mejoras en la innovación. Varias instituciones educativas, editoriales e investigadores pueden unirse y crear un cloud común a través del cual los estudiantes puedan beneficiarse de los recursos y conocimientos del conjunto.
+\subsection{Incremento de las necesidades de innovación}
+Actualmente los proyectos académicos son patrocinados por grandes empresas. Estos proyectos en tiempo real requieren una enorme cantidad de datos en tiempo real y una enorme potencia de procesamiento que se debe ser escalable y debe estar disponible a la demanda.
+\subsection{Análisis de datos en el entorno académico}
+Muchas universidades ya han empezado a poner contenido a disposición de los medios electrónicos mediante la digitalización de sus bibliotecas. Herramientas como Hadoop pueden utilizarse para la indexación y búsqueda de estos contenidos que brindan muchas facilidades y son útiles para los alumnos.
+
+\section{Beneficios de Cloud Computing para instituciones y estudiantes}
+\subsection{Economía}
+La principal ventaja para las instituciones es en gran parte económica, lo cual se puede apreciar mediante el servicio de e-mail ofrecido gratuitamente por proveedores externos. El hardware para estos servicios puede ser redistribuido o eliminado, lo cual conlleva a una ganancia en espacio, esto es un hecho importante en los campus universitarios. De esta manera se disminuye el gasto en personal o este puede ser reasignado. El hecho también de que se pague "por hacer un uso" en vez de pagar solo por hardware que es mal utilizado resulta muy atractivo para las instituciones.
+\subsection{Elasticidad}
+Esto permite a las instituciones iniciar con servicios a pequeña escala e irlos construyendo poco a poco sin una inversión inicial significativa. También permite escalar rápidamente durante los tiempos de mayor demanda, como en el inicio del año académico o durante el período de evaluaciones. Por lo tanto, no hay necesidad de planificar los niveles de uso de antemano.
+\subsection{Mayor disponibilidad}
+Un beneficio adicional es que la disponibilidad puede ser mayor con menor tiempo de inactividad debido a los recursos superiores y capacidades disponibles para los proveedores de la nube. Mientras que un departamento de servicio de computación universitario podrá tratar de lograr la disponibilidad del $99,5\%$ de sus servicios educativos, como el LMS, Google ofrece el $99,9\%$ de disponibilidad de su suite de aplicaciones educativas y parece llegar a este objetivo. Los estudiantes que dependen cada vez más de los servicios en línea para el aprendizaje y la evaluación deben recibir la mejor disponibilidad de estos.
+\subsection{Reducción del impacto ambiental}
+En algunos países existen los llamados "objetivos verdes" para las reducciones en el consumo de energía por parte de las organizaciones.\\ \\
+Cloud computing permite a las instituciones educativas reducir su consumo de energía y, en teoría, los proveedores del servicio cloud deberían ser capaces de optimizar el consumo de energía de un grupo de clientes. Sin embargo, no es tan sencillo obtener estadísticas para describir el uso de energía por parte de los proveedores cloud y es probable que su consumo de energía esté incrementándose de manera significativa.
+\subsection{Concentración en el negocio principal}
+Otra ventaja que posee cloud computing es que permite a las instituciones concentrarse en su finalidad principal de la educación e investigación. Las escuelas y universidades, normalmente, no poseen sus propias plantas de aguas residuales y estaciones de energía; de igual manera podemos afirmar que los servicios computacionales se están volviendo cada vez más comercializables y son mejor manejados por organizaciones con experiencia y economías escalables. 
+\subsection{Satisfacción del usuario final}
+Para los usuarios finales, además de una mejor disponibilidad, hay otros beneficios claros de los servicios basados en la nube, particularmente evidentes con la nueva gama de nuevas aplicaciones que suministra. Estas contienen las últimas herramientas y características de empresas innovadoras, tales como Microsoft y Google. Los estudiantes pueden utilizar las aplicaciones de office en forma gratuita sin tener que comprar, instalar y mantener estas aplicaciones actualizadas en sus equipos. Las posibilidades de colaboración han mejorado enormemente, ahora los alumnos no tienen que preocuparse de realizar copias de seguridad o de perder data, ya que todo es almacenado de forma segura en la nube - con gran capacidad de almacenamiento proporcionado de forma gratuita. El usuario puede acceder a sus datos desde cualquier ubicación o desde una variedad de dispositivos como su teléfono móvil. Las tecnologías como HTML5 se incrementarán cada vez para que los usuarios puedan trabajar sin conexión cuando el acceso a Internet es intermitente.
+
+
+\section{Futuro de Cloud Computing}
+J. Weinman habla en su artículo acerca del futuro de la computación cloud  [18] y en este artículo mencionaremos algunos ámbitos importantes como futuras opciones de investigación. La administración del sistema, configuración y gestión de la red se convertirá en un importante campo lleno de innovación. Se acelerarán las tendencias de los grandes fabricantes que ingresarán en la computación cloud. Todos los principales entornos de desarrollo integrado (IDEs) ofrecerán opciones de implementación cloud. La plataforma como servicio tendrá sus primeros pasos en la escena principal. Una nueva generación de middleware para la nube se levantará dominando a los servidores de aplicaciones J2EE tradicionales. Cloud computing está en un crecimiento constante, pero se centra, principalmente, en una plataforma abierta. Google podría aumentar el área de la inversión en la empresa; de esta forma más usuarios de negocios podrán utilizar Google Apps. El primer lote de empresas SaaS 1.0 se enfrentarán a un riesgo de quedar en quiebra. El número de empresas que abandonarán el uso de su propio servidor se incrementará significativamente. Los servicios de cloud computing privado se harán más populares. El próximo objetivo de SaaS será Business Intelligence (BI). SAP u Oracle serán parte del área de Plataforma como un servicio (PaaS). La adopción y el uso de las redes sociales para las empresas serán más rápidos y así sucesivamente.
+
+
+\section{Conclusiones}
+Este trabajo presenta todo acerca de la computación cloud, que es una nueva tecnología emergente en el mundo actual. Se prevé que esta tecnología traerá para nosotros, mediante la resolución de los problemas y desafíos existentes, una capacidad infinita de cómputo, rápido microprocesador, gran capacidad de memoria, red de alta velocidad, una arquitectura de sistema fiable etc. y vamos a entrar en una nueva era de informática de la próxima generación a través de la tecnología de cloud computing.\\ \\
+Algunas universidades ya empezaron a utilizar la tecnología de la computación en nube para uso educativo y esperamos que en un futuro próximo, de acuerdo con el bajo costo y la comodidad de cloud computing más escuelas y universidades transfieran su procesamiento de información a la nube. Como era de esperar, el U-learning va a entrar en una nueva etapa de desarrollo con la ayuda de la computación cloud. Esperamos que con este trabajo se gane más interés en averiguar y profundizar un poco más en el tema y ser motivo para futuros artículos y trabajos de investigación.
+
+
+\section*{Agradecimientos}
+Agradecemos a la Escuela de Ciencia de la Computación de la Facultad de Ciencias (FC), de la Universidad Nacional de Ingeniería (UNI) por las facilidades brindadas para realizar nuestra investigación y al Centro de Tecnologías de Información y Comunicaciones (CTIC UNI) por el ambiente otorgado para la realización de la redacción y revisiones del presente artículo.
+
+
+\ifCLASSOPTIONcaptionsoff
+  \newpage
+\fi
+
+\begin{thebibliography}{1}
+
+\bibitem{unistan} Bo Dong1, Qinghua Zheng1, Jie Yang1, Haifei Li, Mu Qiao, “An Elearning Ecosystem Based on Cloud Computing Infrastructure”, MOE KLINNS Lab and SKLMS Lab, Xi'an Jiaotong University, 710049, China.\\
+\bibitem{brid} Del Siegle, Ph.D, "Cloud Computing A Free Technology".\\
+\bibitem{par} [Online: January, 2012] Search loudcomputing, What is Cloud Computing; http://searchcloudcomputing.techtarget.com/definition/cloud-computing\\
+\bibitem{parallel} Greg Boss, Padma Malladi, Dennis Quan, Linda Legregni, Harold Hall, "Cloud Computing", IBM Paper, October, 2007.\\
+\bibitem{paralelo2} National Institute of Standards and Technology(NIST)
+http: //csrc. nist.gov/publ ications/drafts/800-146/Draft -NIS T -SP800-146.pdf
+\\
+\bibitem{parallel3} Xin Tan, Yongbeom Kim, "Cloud Computing for Education: A Case of Using Google Docs in MBA Group Projects", Information Systems and Decision Sciences Department, Fairleigh Dickinson University.\\
+\bibitem{parallel4} Bo Wang, HongYu Xing, "The Application of Cloud Computing in Education Informatization", Modern Educational Technology Center, North China Institute of Science and Techonoligy.\\
+\bibitem{parallel5} S.Mohana Saranya, Dr.M.Vijayalakshmi, "Interactive Mobile Live Video Learning System in Cloud Environment", Department of IST, College of Engineering, Anna University, Guindy, Chennai.\\
+\bibitem{parallel6} Westen, D., Burton, L., Kowalski, R. (2006). Psychology. Australian and New Zealand Edition. Queensland: Wiley.\\
+\bibitem{parallel7} Wen-Wei Liao, Rong-Guey Ho, "Applying Observational Learning in the Cloud Education System of Art Education in an Elementary School", Graduate Institute of Information and Computer Education, National Taiwan Normal University, Taipei, Taiwan.\\
+\bibitem{parallel8} Prabir Bhattacharya, Minzhe Guo, Lixin Tao, Bin Wu, Kai Qian, E. Kent Palmer, "A Cloud-based Cyberlearning Environment for Introductory Computing Programming Education", University of Cincinnati, Cincinnati, Ohio, 11th IEEE International Conference on Advanced Learning Technologies, 2011.\\
+\bibitem{cloud} [Online] ULearning: La revolución del aprendizaje http://www.accenture.com/SiteCollectionDocuments/Local Spain/PDF/Accenture Factor Humano Ulearning.pdf\\
+\bibitem{cloud1} [Online] TCP/IP Tutorial and Technical Overview http://www.redbooks.ibm.com/redbooks/pdfs/gg243376.pdf\\
+\bibitem{cloud2} Dong Xu, "Cloud computing: an emerging technology" in Inter Conf on Computer Design and Application, vol. I, pp.100-I03, 2010.\\
+\bibitem{cloud3} IBM, "Cloud computing fundamentals", Dec 2010. 
+http: //www.ibm.com/developerworks/cloud/library/cl-c1oudintro/\\
+\bibitem{cloud4} Jiyi WU, Xiaoping GE, Ya Wang, "Cloud storage as the infrastructure of cloud computing", in Inter. Conf on Intelligent Computing and Cognitive Informatics, pp. 380-383, 2010.\\
+\bibitem{cloud5} [Online] Search information technology. IT (information technology) http://searchdatacenter.techtarget.com/definition/IT\\
+\bibitem{cloud6} [Online: January, 2012] Apple : Mobile Me, Frequently Asked Questions; http://www.apple.com/mobileme/transition.html\\
+
+\end{thebibliography}
+
+
+\end{document}
+
+

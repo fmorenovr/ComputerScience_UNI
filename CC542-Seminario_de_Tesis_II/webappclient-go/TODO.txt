@@ -1,0 +1,37 @@
+### Registro y Modificar:
+* Registrar module --> poligonos y sensores.
+* Modificar module --> poligonos y sensores.
+* Eliminar  module --> poligonos y sensores.
+
+### Mostrar alertas con parametros (podria ser ranguitos de barras)
+* Empezar
+
+### Vista: Info y Heat: Descuadran
+* Las tablas de info
+* La barra de color
+* El heatmap
+
+### MQTT:
+* Corregir el uso de usuarios en Sensores y HeatMaps "+/tipo_sensor" (por ahora se usa Master)
+* Crear un middleware (puede ser con node o con golang <3) que gestione las suscripciones.
+* En Sensores: Escoger Temperatura + "todos" y mostrar todos los modulos que tengan temperatura.
+* Anadir TLS/SSL el mqtt websockets
+* Añadir rangos por tipo sensor
+
+### Subir fotos -> crear directorio con las fotos de las personas profile_photos.
+* Corregir cuando no haya archivo.
+* Anadir a la db (de cada usuario) el nombre de la foto subida.
+* Cada foto subida por usuario, debe eliminar la anterior.
+* Debe verificar que solo sea png, jpg.
+* Si no tiene foto, por defecto sera avatar.png
+
+### corregir el file server directory
+* Evitar que puedan ver los archivos
+* Comprimir todo los js
+
+### al actualziar pagina, debe retornar como metodo GET (en vez de reenviar como metodo POST)
+* ContactUs
+
+## al crear usuario, mandar correo con user, passwd
+
+## si no tiene informacion de graficas o cosas asi, aparecer vacio, aparecer mensaje de vacio

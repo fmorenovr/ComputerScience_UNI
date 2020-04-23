@@ -1,0 +1,57 @@
+db.alertmeasured.insert({
+  "id_fognode":"FN0001",
+  "id_alert":"Alarm1",
+  "type":"Alert 1",
+  "date":"2017-03-22 18:35:20",
+  "values":[
+    {
+      "id_moduleiot":"C002",
+      "id_sensor":"TS0002",
+      "type":"Temperatura",
+      "value":42,
+      "date":"2017-03-22 18:35:20"
+    }, {
+      "id_moduleiot":"C001",
+      "id_sensor":"TS0001",
+      "type":"Temperatura",
+      "value":43,
+      "date":"2017-03-22 18:35:20"
+    },{
+      "id_moduleiot":"C001",
+      "id_sensor":"PS0001",
+      "type":"Presion",
+      "value":9850,
+      "date":"2017-03-22 18:34:15"
+    },{
+      "id_moduleiot":"C002",
+      "id_sensor":"PS0002",
+      "type":"Presion",
+      "value":9850,
+      "date":"2017-03-22 18:34:15"
+    },{
+      "id_moduleiot":"C002",
+      "id_sensor":"DS0001",
+      "type":"Dioxido",
+      "value":36.05442,
+      "date":"2017-03-22 18:34:03"
+    },{
+      "id_moduleiot":"C001",
+      "id_sensor":"DS0002",
+      "type":"Dioxido",
+      "value":36.05442,
+      "date":"2017-03-22 18:34:03"
+    },{
+      "id_moduleiot":"C001",
+      "id_sensor":"TS0001",
+      "type":"Temperatura",
+      "value":44,
+      "date":"2017-03-22 18:35:10"
+    },{
+      "id_moduleiot":"C002",
+      "id_sensor":"TS0002",
+      "type":"Temperatura",
+      "value":45,
+      "date":"2017-03-22 18:35:20"
+    }
+  ]
+})

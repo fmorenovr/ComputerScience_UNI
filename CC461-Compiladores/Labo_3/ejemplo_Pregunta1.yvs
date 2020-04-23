@@ -1,0 +1,9 @@
+program prog ;
+begin
+	x:=4;
+	y:=x*9;
+  z:=x^4;
+  w:=x/4;
+  r:=x+1;
+  i:=r-6;
+end.

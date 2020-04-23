@@ -1,0 +1,6 @@
+#We will plot sin(x+t) in this gif animation
+reset
+set term gif animate delay 100
+set output "animateBestExp.gif"
+load "animateBestExp.gnuplot"
+set output

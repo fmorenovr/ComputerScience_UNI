@@ -1,0 +1,1210 @@
+db.modulesiot.insert({
+  "id_moduleiot":"C001",
+  "passwd":"100C",
+  "model": "verl",
+  "latitude":-12.0173721,
+  "longuitude":-77.0507113,
+  "zone":"FC",
+  "installation_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "polygons":[
+    {
+      "latitude" : -12.01754963139913,
+      "longuitude" : -77.05094665288925
+    },
+    {
+      "latitude" : -12.017554878249832,
+      "longuitude" : -77.05065965652466
+    },
+    {
+      "latitude" : -12.017014452089937,
+      "longuitude" : -77.05065965652466
+    },
+    {
+      "latitude" : -12.017011828659315,
+      "longuitude" : -77.05095201730728
+    },
+    {
+      "latitude" : -12.017229573312703,
+      "longuitude" : -77.05096006393433
+    },
+    {
+      "latitude" : -12.01722432645565,
+      "longuitude" : -77.05072402954102
+    },
+    {
+      "latitude" : -12.017345004141847,
+      "longuitude" : -77.05072537064552
+    },
+    {
+      "latitude" : -12.017341069000759,
+      "longuitude" : -77.05096073448658
+    }
+  ],
+  "sensors":[
+    {
+      "id_sensor":"TS0001",
+      "type":"Temperatura",
+      "state":"private",
+      "unit":"�C",
+      "model":"T1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"PS0001",
+      "type":"Presion",
+      "state":"free",
+      "unit":"Pa",
+      "model":"PA1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"MS0001",
+      "type":"Monoxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"DS0001",
+      "type":"Dioxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO2",
+      "date_installed":"2016-05-09 21:44:10"
+    }
+  ]
+})
+db.modulesiot.insert({
+  "id_moduleiot":"C002",
+  "passwd":"200C",
+  "model": "verl",
+  "latitude":-12.0166429,
+  "longuitude":-77.049791,
+  "zone":"CTIC",
+  "installation_date":"2016-09-20 13:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "polygons":[
+    {
+      "latitude" : -12.016476648280795,
+      "longuitude" : -77.04961091279984
+    },
+    {
+      "latitude" : -12.016460907665321,
+      "longuitude" : -77.05042093992233
+    },
+    {
+      "latitude" : -12.016712757402502,
+      "longuitude" : -77.05042093992233
+    },
+    {
+      "latitude" : -12.01673112143662,
+      "longuitude" : -77.05004274845123
+    },
+    {
+      "latitude" : -12.016893774255523,
+      "longuitude" : -77.05004274845123
+    },
+    {
+      "latitude" : -12.016906891414054,
+      "longuitude" : -77.04961627721786
+    }
+  ],
+  "sensors":[
+    {
+      "id_sensor":"TS0002",
+      "type":"Temperatura",
+      "state":"private",
+      "unit":"�C",
+      "model":"T1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"PS0002",
+      "type":"Presion",
+      "state":"free",
+      "unit":"Pa",
+      "model":"PA1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"MS0002",
+      "type":"Monoxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"DS0002",
+      "type":"Dioxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO2",
+      "date_installed":"2016-05-09 21:44:10"
+    }
+  ]
+})
+db.modulesiot.insert({
+  "id_moduleiot":"C003",
+  "passwd":"300C",
+  "model": "verl",
+  "latitude":-12.0172765,
+  "longuitude":-77.0493128,
+  "zone":"FIEE",
+  "installation_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "polygons":[
+    {
+      "latitude": -12.0176689,
+      "longuitude": -77.0494911
+    }, {
+      "latitude": -12.0174855,
+      "longuitude": -77.0485441
+    }, {
+      "latitude": -12.0164656,
+      "longuitude": -77.0489001
+    }, {
+      "latitude": -12.0164446,
+      "longuitude": -77.0494835
+    }
+  ],
+  "sensors":[
+    {
+      "id_sensor":"TS0003",
+      "type":"Temperatura",
+      "state":"private",
+      "unit":"�C",
+      "model":"T1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"PS0003",
+      "type":"Presion",
+      "state":"free",
+      "unit":"Pa",
+      "model":"PA1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"MS0003",
+      "type":"Monoxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"DS0003",
+      "type":"Dioxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO2",
+      "date_installed":"2016-05-09 21:44:10"
+    }
+  ]
+})
+db.modulesiot.insert({
+  "id_moduleiot":"C004",
+  "passwd":"400C",
+  "model": "verl",
+  "latitude":-12.0161385,
+  "longuitude":-77.0505176,
+  "zone":"FIIS",
+  "installation_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "polygons":[
+    {
+      "latitude": -12.0163298,
+      "longuitude": -77.0503896
+    }, {
+      "latitude": -12.0158712,
+      "longuitude": -77.0504044
+    }, {
+      "latitude": -12.015887,
+      "longuitude": -77.0507369
+    }, {
+      "latitude": -12.0163409,
+      "longuitude": -77.0507273
+    }
+  ],
+  "sensors":[
+    {
+      "id_sensor":"TS0004",
+      "type":"Temperatura",
+      "state":"private",
+      "unit":"�C",
+      "model":"T1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"PS0004",
+      "type":"Presion",
+      "state":"free",
+      "unit":"Pa",
+      "model":"PA1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"MS0004",
+      "type":"Monoxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"DS0004",
+      "type":"Dioxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO2",
+      "date_installed":"2016-05-09 21:44:10"
+    }
+  ]
+})
+db.modulesiot.insert({
+  "id_moduleiot":"C005",
+  "passwd":"500C",
+  "model": "verl",
+  "latitude":-12.0161383,
+  "longuitude":-77.0505174,
+  "zone":"FIA",
+  "installation_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "polygons":[
+    {
+      "latitude": -12.0163298,
+      "longuitude": -77.0503896
+    }, {
+      "latitude": -12.0158712,
+      "longuitude": -77.0504044
+    }, {
+      "latitude": -12.015887,
+      "longuitude": -77.0507369
+    }, {
+      "latitude": -12.0163409,
+      "longuitude": -77.0507273
+    }
+  ],
+  "sensors":[
+    {
+      "id_sensor":"TS0005",
+      "type":"Temperatura",
+      "state":"private",
+      "unit":"�C",
+      "model":"T1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"PS0005",
+      "type":"Presion",
+      "state":"free",
+      "unit":"Pa",
+      "model":"PA1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"MS0005",
+      "type":"Monoxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"DS0005",
+      "type":"Dioxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO2",
+      "date_installed":"2016-05-09 21:44:10"
+    }
+  ]
+})
+db.modulesiot.insert({
+  "id_moduleiot":"C006",
+  "passwd":"600C",
+  "model": "verl",
+  "latitude":-12.0161380,
+  "longuitude":-77.0505170,
+  "zone":"FIC",
+  "installation_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "polygons":[
+    {
+      "latitude": -12.0163298,
+      "longuitude": -77.0503896
+    }, {
+      "latitude": -12.0158712,
+      "longuitude": -77.0504044
+    }, {
+      "latitude": -12.015887,
+      "longuitude": -77.0507369
+    }, {
+      "latitude": -12.0163409,
+      "longuitude": -77.0507273
+    }
+  ],
+  "sensors":[
+    {
+      "id_sensor":"TS0006",
+      "type":"Temperatura",
+      "state":"private",
+      "unit":"�C",
+      "model":"T1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"PS0006",
+      "type":"Presion",
+      "state":"free",
+      "unit":"Pa",
+      "model":"PA1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"MS0006",
+      "type":"Monoxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"DS0006",
+      "type":"Dioxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO2",
+      "date_installed":"2016-05-09 21:44:10"
+    }
+  ]
+})
+db.modulesiot.insert({
+  "id_moduleiot":"C007",
+  "passwd":"700C",
+  "model": "verl",
+  "latitude":-12.0161378,
+  "longuitude":-77.0505168,
+  "zone":"BC",
+  "installation_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "polygons":[
+    {
+      "latitude": -12.0163298,
+      "longuitude": -77.0503896
+    }, {
+      "latitude": -12.0158712,
+      "longuitude": -77.0504044
+    }, {
+      "latitude": -12.015887,
+      "longuitude": -77.0507369
+    }, {
+      "latitude": -12.0163409,
+      "longuitude": -77.0507273
+    }
+  ],
+  "sensors":[
+    {
+      "id_sensor":"TS0007",
+      "type":"Temperatura",
+      "state":"private",
+      "unit":"�C",
+      "model":"T1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"PS0007",
+      "type":"Presion",
+      "state":"free",
+      "unit":"Pa",
+      "model":"PA1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"MS0007",
+      "type":"Monoxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"DS0007",
+      "type":"Dioxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO2",
+      "date_installed":"2016-05-09 21:44:10"
+    }
+  ]
+})
+db.modulesiot.insert({
+  "id_moduleiot":"C008",
+  "passwd":"800C",
+  "model": "verl",
+  "latitude":-12.0161386,
+  "longuitude":-77.0505177,
+  "zone":"FIGMM",
+  "installation_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "polygons":[
+    {
+      "latitude": -12.0163298,
+      "longuitude": -77.0503896
+    }, {
+      "latitude": -12.0158712,
+      "longuitude": -77.0504044
+    }, {
+      "latitude": -12.015887,
+      "longuitude": -77.0507369
+    }, {
+      "latitude": -12.0163409,
+      "longuitude": -77.0507273
+    }
+  ],
+  "sensors":[
+    {
+      "id_sensor":"TS0008",
+      "type":"Temperatura",
+      "state":"private",
+      "unit":"�C",
+      "model":"T1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"PS0008",
+      "type":"Presion",
+      "state":"free",
+      "unit":"Pa",
+      "model":"PA1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"MS0008",
+      "type":"Monoxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"DS0008",
+      "type":"Dioxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO2",
+      "date_installed":"2016-05-09 21:44:10"
+    }
+  ]
+})
+db.modulesiot.insert({
+  "id_moduleiot":"C009",
+  "passwd":"900C",
+  "model": "verl",
+  "latitude":-12.0161382,
+  "longuitude":-77.0505172,
+  "zone":"FIGMM-1",
+  "installation_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "polygons":[
+    {
+      "latitude": -12.0163298,
+      "longuitude": -77.0503896
+    }, {
+      "latitude": -12.0158712,
+      "longuitude": -77.0504044
+    }, {
+      "latitude": -12.015887,
+      "longuitude": -77.0507369
+    }, {
+      "latitude": -12.0163409,
+      "longuitude": -77.0507273
+    }
+  ],
+  "sensors":[
+    {
+      "id_sensor":"TS0009",
+      "type":"Temperatura",
+      "state":"private",
+      "unit":"�C",
+      "model":"T1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"PS0009",
+      "type":"Presion",
+      "state":"free",
+      "unit":"Pa",
+      "model":"PA1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"MS0009",
+      "type":"Monoxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"DS0009",
+      "type":"Dioxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO2",
+      "date_installed":"2016-05-09 21:44:10"
+    }
+  ]
+})
+db.modulesiot.insert({
+  "id_moduleiot":"C010",
+  "passwd":"010C",
+  "model": "verl",
+  "latitude":-12.0161381,
+  "longuitude":-77.0505171,
+  "zone":"BC-2",
+  "installation_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "polygons":[
+    {
+      "latitude": -12.0163298,
+      "longuitude": -77.0503896
+    }, {
+      "latitude": -12.0158712,
+      "longuitude": -77.0504044
+    }, {
+      "latitude": -12.015887,
+      "longuitude": -77.0507369
+    }, {
+      "latitude": -12.0163409,
+      "longuitude": -77.0507273
+    }
+  ],
+  "sensors":[
+    {
+      "id_sensor":"TS0010",
+      "type":"Temperatura",
+      "state":"private",
+      "unit":"�C",
+      "model":"T1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"PS0010",
+      "type":"Presion",
+      "state":"free",
+      "unit":"Pa",
+      "model":"PA1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"MS0010",
+      "type":"Monoxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"DS0010",
+      "type":"Dioxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO2",
+      "date_installed":"2016-05-09 21:44:10"
+    }
+  ]
+})
+db.modulesiot.insert({
+  "id_moduleiot":"C011",
+  "passwd":"110C",
+  "model": "verl",
+  "latitude":-12.0161375,
+  "longuitude":-77.0505165,
+  "zone":"BC-3",
+  "installation_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "polygons":[
+    {
+      "latitude": -12.0163298,
+      "longuitude": -77.0503896
+    }, {
+      "latitude": -12.0158712,
+      "longuitude": -77.0504044
+    }, {
+      "latitude": -12.015887,
+      "longuitude": -77.0507369
+    }, {
+      "latitude": -12.0163409,
+      "longuitude": -77.0507273
+    }
+  ],
+  "sensors":[
+    {
+      "id_sensor":"TS0011",
+      "type":"Temperatura",
+      "state":"private",
+      "unit":"�C",
+      "model":"T1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"PS0011",
+      "type":"Presion",
+      "state":"free",
+      "unit":"Pa",
+      "model":"PA1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"MS0011",
+      "type":"Monoxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"DS0011",
+      "type":"Dioxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO2",
+      "date_installed":"2016-05-09 21:44:10"
+    }
+  ]
+})
+db.modulesiot.insert({
+  "id_moduleiot":"C012",
+  "passwd":"210C",
+  "model": "verl",
+  "latitude":-12.0161372,
+  "longuitude":-77.0505163,
+  "zone":"BC-4",
+  "installation_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "polygons":[
+    {
+      "latitude": -12.0163298,
+      "longuitude": -77.0503896
+    }, {
+      "latitude": -12.0158712,
+      "longuitude": -77.0504044
+    }, {
+      "latitude": -12.015887,
+      "longuitude": -77.0507369
+    }, {
+      "latitude": -12.0163409,
+      "longuitude": -77.0507273
+    }
+  ],
+  "sensors":[
+    {
+      "id_sensor":"TS0012",
+      "type":"Temperatura",
+      "state":"private",
+      "unit":"�C",
+      "model":"T1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"PS0012",
+      "type":"Presion",
+      "state":"free",
+      "unit":"Pa",
+      "model":"PA1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"MS0012",
+      "type":"Monoxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"DS0012",
+      "type":"Dioxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO2",
+      "date_installed":"2016-05-09 21:44:10"
+    }
+  ]
+})
+db.modulesiot.insert({
+  "id_moduleiot":"C013",
+  "passwd":"310C",
+  "model": "verl",
+  "latitude":-12.0161378,
+  "longuitude":-77.0505168,
+  "zone":"BC-5",
+  "installation_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "polygons":[
+    {
+      "latitude": -12.0163298,
+      "longuitude": -77.0503896
+    }, {
+      "latitude": -12.0158712,
+      "longuitude": -77.0504044
+    }, {
+      "latitude": -12.015887,
+      "longuitude": -77.0507369
+    }, {
+      "latitude": -12.0163409,
+      "longuitude": -77.0507273
+    }
+  ],
+  "sensors":[
+    {
+      "id_sensor":"TS0013",
+      "type":"Temperatura",
+      "state":"private",
+      "unit":"�C",
+      "model":"T1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"PS0013",
+      "type":"Presion",
+      "state":"free",
+      "unit":"Pa",
+      "model":"PA1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"MS0013",
+      "type":"Monoxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"DS0013",
+      "type":"Dioxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO2",
+      "date_installed":"2016-05-09 21:44:10"
+    }
+  ]
+})
+db.modulesiot.insert({
+  "id_moduleiot":"C014",
+  "passwd":"410C",
+  "model": "verl",
+  "latitude":-12.0161372,
+  "longuitude":-77.0505163,
+  "zone":"BC-6",
+  "installation_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "polygons":[
+    {
+      "latitude": -12.0163298,
+      "longuitude": -77.0503896
+    }, {
+      "latitude": -12.0158712,
+      "longuitude": -77.0504044
+    }, {
+      "latitude": -12.015887,
+      "longuitude": -77.0507369
+    }, {
+      "latitude": -12.0163409,
+      "longuitude": -77.0507273
+    }
+  ],
+  "sensors":[
+    {
+      "id_sensor":"TS0014",
+      "type":"Temperatura",
+      "state":"private",
+      "unit":"�C",
+      "model":"T1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"PS0014",
+      "type":"Presion",
+      "state":"free",
+      "unit":"Pa",
+      "model":"PA1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"MS0014",
+      "type":"Monoxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"DS0014",
+      "type":"Dioxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO2",
+      "date_installed":"2016-05-09 21:44:10"
+    }
+  ]
+})
+db.modulesiot.insert({
+  "id_moduleiot":"C015",
+  "passwd":"510C",
+  "model": "verl",
+  "latitude":-12.0161369,
+  "longuitude":-77.0505161,
+  "zone":"BC-7",
+  "installation_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "polygons":[
+    {
+      "latitude": -12.0163298,
+      "longuitude": -77.0503896
+    }, {
+      "latitude": -12.0158712,
+      "longuitude": -77.0504044
+    }, {
+      "latitude": -12.015887,
+      "longuitude": -77.0507369
+    }, {
+      "latitude": -12.0163409,
+      "longuitude": -77.0507273
+    }
+  ],
+  "sensors":[
+    {
+      "id_sensor":"TS0015",
+      "type":"Temperatura",
+      "state":"private",
+      "unit":"�C",
+      "model":"T1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"PS0015",
+      "type":"Presion",
+      "state":"free",
+      "unit":"Pa",
+      "model":"PA1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"MS0015",
+      "type":"Monoxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"DS0015",
+      "type":"Dioxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO2",
+      "date_installed":"2016-05-09 21:44:10"
+    }
+  ]
+})
+db.modulesiot.insert({
+  "id_moduleiot":"C016",
+  "passwd":"610C",
+  "model": "verl",
+  "latitude":-12.0161377,
+  "longuitude":-77.0505167,
+  "zone":"BC-8",
+  "installation_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "polygons":[
+    {
+      "latitude": -12.0163298,
+      "longuitude": -77.0503896
+    }, {
+      "latitude": -12.0158712,
+      "longuitude": -77.0504044
+    }, {
+      "latitude": -12.015887,
+      "longuitude": -77.0507369
+    }, {
+      "latitude": -12.0163409,
+      "longuitude": -77.0507273
+    }
+  ],
+  "sensors":[
+    {
+      "id_sensor":"TS0016",
+      "type":"Temperatura",
+      "state":"private",
+      "unit":"�C",
+      "model":"T1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"PS0016",
+      "type":"Presion",
+      "state":"free",
+      "unit":"Pa",
+      "model":"PA1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"MS0016",
+      "type":"Monoxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"DS0016",
+      "type":"Dioxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO2",
+      "date_installed":"2016-05-09 21:44:10"
+    }
+  ]
+})
+db.modulesiot.insert({
+  "id_moduleiot":"C017",
+  "passwd":"710C",
+  "model": "verl",
+  "latitude":-12.0161379,
+  "longuitude":-77.0505169,
+  "zone":"BC-9",
+  "installation_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "polygons":[
+    {
+      "latitude": -12.0163298,
+      "longuitude": -77.0503896
+    }, {
+      "latitude": -12.0158712,
+      "longuitude": -77.0504044
+    }, {
+      "latitude": -12.015887,
+      "longuitude": -77.0507369
+    }, {
+      "latitude": -12.0163409,
+      "longuitude": -77.0507273
+    }
+  ],
+  "sensors":[
+    {
+      "id_sensor":"TS0017",
+      "type":"Temperatura",
+      "state":"private",
+      "unit":"�C",
+      "model":"T1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"PS0017",
+      "type":"Presion",
+      "state":"free",
+      "unit":"Pa",
+      "model":"PA1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"MS0017",
+      "type":"Monoxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"DS0017",
+      "type":"Dioxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO2",
+      "date_installed":"2016-05-09 21:44:10"
+    }
+  ]
+})
+db.modulesiot.insert({
+  "id_moduleiot":"C018",
+  "passwd":"810C",
+  "model": "verl",
+  "latitude":-12.0161382,
+  "longuitude":-77.0505172,
+  "zone":"BC-10",
+  "installation_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "polygons":[
+    {
+      "latitude": -12.0163298,
+      "longuitude": -77.0503896
+    }, {
+      "latitude": -12.0158712,
+      "longuitude": -77.0504044
+    }, {
+      "latitude": -12.015887,
+      "longuitude": -77.0507369
+    }, {
+      "latitude": -12.0163409,
+      "longuitude": -77.0507273
+    }
+  ],
+  "sensors":[
+    {
+      "id_sensor":"TS0018",
+      "type":"Temperatura",
+      "state":"private",
+      "unit":"�C",
+      "model":"T1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"PS0018",
+      "type":"Presion",
+      "state":"free",
+      "unit":"Pa",
+      "model":"PA1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"MS0018",
+      "type":"Monoxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"DS0018",
+      "type":"Dioxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO2",
+      "date_installed":"2016-05-09 21:44:10"
+    }
+  ]
+})
+db.modulesiot.insert({
+  "id_moduleiot":"C019",
+  "passwd":"910C",
+  "model": "verl",
+  "latitude":-12.0161386,
+  "longuitude":-77.0505167,
+  "zone":"BC-11",
+  "installation_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "polygons":[
+    {
+      "latitude": -12.0163298,
+      "longuitude": -77.0503896
+    }, {
+      "latitude": -12.0158712,
+      "longuitude": -77.0504044
+    }, {
+      "latitude": -12.015887,
+      "longuitude": -77.0507369
+    }, {
+      "latitude": -12.0163409,
+      "longuitude": -77.0507273
+    }
+  ],
+  "sensors":[
+    {
+      "id_sensor":"TS0019",
+      "type":"Temperatura",
+      "state":"private",
+      "unit":"�C",
+      "model":"T1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"PS0019",
+      "type":"Presion",
+      "state":"free",
+      "unit":"Pa",
+      "model":"PA1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"MS0019",
+      "type":"Monoxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"DS0019",
+      "type":"Dioxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO2",
+      "date_installed":"2016-05-09 21:44:10"
+    }
+  ]
+})
+db.modulesiot.insert({
+  "id_moduleiot":"C020",
+  "passwd":"020C",
+  "model": "verl",
+  "latitude":-12.0161383,
+  "longuitude":-77.0505164,
+  "zone":"BC-12",
+  "installation_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "polygons":[
+    {
+      "latitude": -12.0163298,
+      "longuitude": -77.0503896
+    }, {
+      "latitude": -12.0158712,
+      "longuitude": -77.0504044
+    }, {
+      "latitude": -12.015887,
+      "longuitude": -77.0507369
+    }, {
+      "latitude": -12.0163409,
+      "longuitude": -77.0507273
+    }
+  ],
+  "sensors":[
+    {
+      "id_sensor":"TS0020",
+      "type":"Temperatura",
+      "state":"private",
+      "unit":"�C",
+      "model":"T1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"PS0020",
+      "type":"Presion",
+      "state":"free",
+      "unit":"Pa",
+      "model":"PA1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"MS0020",
+      "type":"Monoxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO1",
+      "date_installed":"2016-05-09 21:44:10"
+    },
+    {
+      "id_sensor":"DS0020",
+      "type":"Dioxido",
+      "state":"private",
+      "unit":"ppm",
+      "model":"CO2",
+      "date_installed":"2016-05-09 21:44:10"
+    }
+  ]
+})

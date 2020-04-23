@@ -1,0 +1,21 @@
+[
+Programa Ejemplo
+    Var x=1,y=100,s=0;
+    Si x<y
+    [
+        mientras x<10
+        [
+            x = x + 1;
+            Imprimir x;
+        ]
+    ]
+    sinosi x = 100
+    [
+        x = x-y;
+    ]
+    sino
+    [
+        Imprimir asdasd;
+    ]
+
+]

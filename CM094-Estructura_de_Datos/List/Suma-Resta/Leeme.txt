@@ -1,0 +1,40 @@
+/*
+########################################################
+###       @Copyright Moreno Vera, Felipe Adrian      ###
+###        Pila == Stack y demas traducciones        ###
+########################################################
+*/
+
+En consola de ubuntu escriba
+
+Estamos creando un Header (cabecera) sobre Simple Linked List (Sll)
+
+o Lista simple enlazada para futuros trabas en C
+
+// FORMAS DE COMPILAR EN GCC
+
+// FORMA 1 
+
+// 1. compilamos todo el paquete junto
+
+// gcc nm_.c main.c nm_fun.c -o nm
+
+// 2. y ejecutamos 
+
+// ./nm
+
+// ------------------------------------------------------------------------------
+
+// FORMA 2
+
+// 1. compilamos primero el paquete donde estan las funciones
+
+// gcc -c nm_fun.c 
+
+// 2. luego compilamos el main
+
+// gcc nm_main.c nm_fun.o -o nm
+
+// 3. y ejecutamos
+
+// ./nm

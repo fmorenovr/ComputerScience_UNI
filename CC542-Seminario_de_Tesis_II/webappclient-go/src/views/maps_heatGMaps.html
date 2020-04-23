@@ -1,0 +1,49 @@
+<h1 class="page-title">Ubicacion de los <span class="fw-semi-bold">{{app.usr}}</span></h1>
+<ol class="breadcrumb">
+  <li>Se entuentra en:</li>
+  <li class="active">Heat Maps</li>
+</ol>
+<section class="container content-section" ng-controller="heatGMapsController">
+  <div>
+    <div class="col-md-2 col-lg-2">
+      <section class="widget">
+        <header>
+          <h4>
+            Tipo <span class="fw-semi-bold">Sensor</span>
+          </h4>
+        </header>
+        <div class="widget-body">
+          <select ng-model="tipo_sensor">
+              <option ng-repeat="sensortipo in sensorestipo" value="{{sensortipo}}">
+              {{sensortipo}}
+              </option>
+          </select>
+          <!--<div id="panel">
+            <button ng-click="toggleHeatmap()">Esconder Heatmap</button>
+            <button ng-click="changeGradient()">Cambiar gradiente</button>
+            <button ng-click="changeRadius()">Cambiar radio</button>
+            <button ng-click="changeOpacity()">Cambiar opacidad</button>
+          </div>-->
+        </div>
+      </section>
+    </div>
+    <div class="col-md-2 col-lg-5">
+      <section class="widget">
+        <header>
+          <h4>
+            <span class="fw-semi-bold">Indicador:</span><small><strong>Alto: </strong>rojo, <strong>Bajo: </strong> azul</small>
+          </h4>
+        </header>
+        <div class="widget-body">
+          <!--<div id="picker" style="border-style:solid;border-width:{{borderBar}}px; height:{{heightBar}}px; width:{{widthBar}}px;"></div>-->
+          <div id="picker" style="border-style:solid; border-width:{{borderBar}}px; height:{{widthBar}}px; width:{{heightBar}}px;"></div>
+        </div>
+      </section>
+    </div>
+    <div class="col-md-4 col-lg-10">
+      <section class="widget">
+        <div id="heatmap" style="width:850px; height:400px;"></div>
+      </section>
+    </div>
+  </div>
+</section>

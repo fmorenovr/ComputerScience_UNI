@@ -1,0 +1,44 @@
+Cadena a probar:
+
+publica Main func(){
+  publica clase1 instancia = nueva  clase1 ();
+}
+
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+|          Estado         |                                Cadena                                            |              Acciones              |
+|-------------------------+----------------------------------------------------------------------------------+------------------------------------|
+| 0                       | PUB1 ID ID PAR1 PAR2 LLAVE1 PUB1 ID ID IGUAL NUEVA ID PAR1 PAR2 PUNTOCOMA LLAVE2 | Desplazar, ir a S2                 |
+| 02                      |      ID ID PAR1 PAR2 LLAVE1 PUB1 ID ID IGUAL NUEVA ID PAR1 PAR2 PUNTOCOMA LLAVE2 | Reduce R32, goto(0,publico)        |
+| 0                       |      ID ID PAR1 PAR2 LLAVE1 PUB1 ID ID IGUAL NUEVA ID PAR1 PAR2 PUNTOCOMA LLAVE2 | ir a S7                            |
+| 07                      |      ID ID PAR1 PAR2 LLAVE1 PUB1 ID ID IGUAL NUEVA ID PAR1 PAR2 PUNTOCOMA LLAVE2 | Desplazar, ir a S12                |
+| 07(12)                  |         ID PAR1 PAR2 LLAVE1 PUB1 ID ID IGUAL NUEVA ID PAR1 PAR2 PUNTOCOMA LLAVE2 | Reduce R41, goto(7,tipo)           |
+| 07                      |         ID PAR1 PAR2 LLAVE1 PUB1 ID ID IGUAL NUEVA ID PAR1 PAR2 PUNTOCOMA LLAVE2 | ir a S20                           |
+| 07(20)                  |         ID PAR1 PAR2 LLAVE1 PUB1 ID ID IGUAL NUEVA ID PAR1 PAR2 PUNTOCOMA LLAVE2 | Desplazar, ir a S22                |
+| 07(20)(22)              |            PAR1 PAR2 LLAVE1 PUB1 ID ID IGUAL NUEVA ID PAR1 PAR2 PUNTOCOMA LLAVE2 | Desplazar, ir a S24                |
+| 07(20)(22)(24)          |                 PAR2 LLAVE1 PUB1 ID ID IGUAL NUEVA ID PAR1 PAR2 PUNTOCOMA LLAVE2 | Desplazar, ir a S28                |
+| 07(20)(22)(24)(28)      |                      LLAVE1 PUB1 ID ID IGUAL NUEVA ID PAR1 PAR2 PUNTOCOMA LLAVE2 | Desplazar, ir a S33                |
+| 07(20)(22)(24)(28)(33)  |                             PUB1 ID ID IGUAL NUEVA ID PAR1 PAR2 PUNTOCOMA LLAVE2 | Desplazar, ir a S2                 |
+| 07(20)(22)(24)(28)(33)2 |                                  ID ID IGUAL NUEVA ID PAR1 PAR2 PUNTOCOMA LLAVE2 | Reduce R32, goto(33,publico)       |
+| 07(20)(22)(24)(28)(33)  |                                  ID ID IGUAL NUEVA ID PAR1 PAR2 PUNTOCOMA LLAVE2 | ir S27                             |
+| 07(20)(22)(24)(28)(33)(27)                             |   ID ID IGUAL NUEVA ID PAR1 PAR2 PUNTOCOMA LLAVE2 | ir S27                             |
+| 07(20)(22)(24)(28)(33)(27)                             |   ID ID IGUAL NUEVA ID PAR1 PAR2 PUNTOCOMA LLAVE2 | Desplazar, ir S12                  |
+| 07(20)(22)(24)(28)(33)(27)(12)                         |      ID IGUAL NUEVA ID PAR1 PAR2 PUNTOCOMA LLAVE2 | Reduce R41, goto(27,tipo)          |
+| 07(20)(22)(24)(28)(33)(27)                             |      ID IGUAL NUEVA ID PAR1 PAR2 PUNTOCOMA LLAVE2 | ir S32                             |
+| 07(20)(22)(24)(28)(33)(27)(32)                         |      ID IGUAL NUEVA ID PAR1 PAR2 PUNTOCOMA LLAVE2 | Desplazar, ir S35                  |
+| 07(20)(22)(24)(28)(33)(27)(32)(35)                     |         IGUAL NUEVA ID PAR1 PAR2 PUNTOCOMA LLAVE2 | Desplazar, ir S39                  |
+| 07(20)(22)(24)(28)(33)(27)(32)(35)(39)                 |               NUEVA ID PAR1 PAR2 PUNTOCOMA LLAVE2 | Desplazar, ir S46                  |
+| 07(20)(22)(24)(28)(33)(27)(32)(35)(39)(46)             |                     ID PAR1 PAR2 PUNTOCOMA LLAVE2 | Desplazar, ir S51                  |
+| 07(20)(22)(24)(28)(33)(27)(32)(35)(39)(46)(51)         |                        PAR1 PAR2 PUNTOCOMA LLAVE2 | Desplazar, ir S57                  |
+| 07(20)(22)(24)(28)(33)(27)(32)(35)(39)(46)(51)(57)     |                             PAR2 PUNTOCOMA LLAVE2 | Desplazar, ir S73                  |
+| 07(20)(22)(24)(28)(33)(27)(32)(35)(39)(46)(51)(57)(73) |                                  PUNTOCOMA LLAVE2 | Desplazar, ir S87                  |
+| 07(20)(22)(24)(28)(33)(27)(32)(35)(39)(46)(51)(57)(73) |                                            LLAVE2 | Reduce R16, goto(33,declaraciones) |
+| 07(20)(22)(24)(28)(33)(27)     |                                                                    LLAVE2 | ir S31                             |
+| 07(20)(22)(24)(28)(33)(27)(31) |                                                                    LLAVE2 | Reduce R7, goto(33,lineas)         |
+| 07(20)(22)(24)(28)(33)(36)     |                                                                    LLAVE2 | Desplazar, ir S40                  |
+| 07(20)(22)(24)(28)(33)(36)(40) |                                                                         $ | Reduce R8, goto(0,functionMain)    |
+| 0                              |                                                                         $ | ir S6                              |
+| 06                             |                                                                         $ | $end, ir S4                        |
+| 064                            |                                                                         $ | $end, ir S9                        |
+| 0649                           |                                                                  aceptado | fin                                |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+

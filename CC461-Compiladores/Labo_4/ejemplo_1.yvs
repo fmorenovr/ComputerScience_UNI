@@ -1,0 +1,12 @@
+Algoritmo meow
+inicioAlgoritmo
+  y=2; x=21; s=1<4; m=1; c=4^2; n=15;
+  Si x<=20
+  inicio
+    y=y+n;
+  fin
+  Sino
+  inicio
+    x=x+m;
+  fin
+finAlgoritmo

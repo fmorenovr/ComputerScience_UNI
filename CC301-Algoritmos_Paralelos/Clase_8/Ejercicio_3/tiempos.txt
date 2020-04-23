@@ -1,0 +1,29 @@
+***** METODO NORMAL
+$ gcc piMontecarlo.c -o pi.out
+$ time ./pi.out
+
+El proceso demoro 0.00296200s de tiempo.
+El montecarlo para PI es: 3.132520
+
+real	0m0.004s
+user	0m0.001s
+sys	  0m0.004s
+
+***** METODO MPI
+$ mpicc piMontecarloMPI.c -o piMPI.out
+$ time mpiexec -np 4 ./piMPI.out
+
+El proceso paralelizado en MPI demoro 0.00234866s de tiempo.
+El montecarlo para PI es: 3.141600
+
+real	0m0.010s
+user	0m0.015s
+sys	  0m0.007s
+
+***** METODO OpenMP
+$ gcc piMontecarlo_openmp.c -o piomp.out -fopenmp
+$ time ./piomp.out
+
+El proceso paralelizado en openMP demoro 0.00000000s de tiempo.
+El montecarlo para PI es: 3.141040
+

@@ -1,0 +1,43 @@
+*************************************************************
+
+INTERPRETE EL CODIGO PARA GRAFICAR EL RESULTADO E INTERPRETE LA FIGURA DE AMBAS CURVAS DE REGRESION LINEAL
+
+Viendo las figuras de Regression lineal ( la aproximacion, el error de validacion)
+
+1. Primero se observa que hizo una regresion lineal sobre los puntos, de los cuales solo 3 estan aproximadamente bien.
+
+2. En la curva de aprndizaje se observa que a mayor numero de intentos, el error va disminuyendo de manera progresivamente lineal.
+
+
+
+*************************************************************
+
+INTERPRETE LAS FIGURAS GENERADAS POR EL CODIGO PARA LAMBDA = 0 (Flujo de agua vs nivel de Agua, error vs muestra de entrenamiento )
+
+1. Se observa que el flujo de agua para lambda = 0, se hizo la regresion polinomial de los puntos generando un polinomio de grado 4 que pasa por todos los puntos de la data, es una regresion mas exacta que la lineal.
+
+2. En la curva de aprendizaje se observa  que a medida que incrementa el numero de trainings el error se comporta de manera polinomial, dismunuyendo e incrementando segun el numero de entrenamientos que tenga.
+
+
+
+
+*************************************************************
+
+COMPLETAR LA FUNCION VALIDATIONCURVE.m Utilizando ....
+
+entonces analizando la grafica de los lambdas (error_X_vector_Lambdas) se observa que un lambda optimo esta alrededor de lambda = 3.
+
+
+
+*************************************************************
+
+COMENTARIO ADICIONAL
+
+Se puede observar que los calculos obtenidos con Lambda = 3 ( como sugiere el paper)
+los errores de aproximacion decrece progresivamente conforme se va aprendiendo de la data.
+por lo tanto como habiamos dicho en el item anterior, lambda optimo es un valor proximo a 3.
+
+*************************************************************
+
+
+La imagen X_X1_X8, muestra los valores de X, X^2, X^3, ... X^8 tomados en los valores del polinomio

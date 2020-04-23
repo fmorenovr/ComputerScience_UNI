@@ -1,0 +1,10 @@
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}
+
+input[type="text"], #messageDecrypt{
+
+  background-color : #A9BCF5; 
+
+}

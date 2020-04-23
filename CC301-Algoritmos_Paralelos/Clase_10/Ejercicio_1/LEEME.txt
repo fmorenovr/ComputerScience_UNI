@@ -1,0 +1,45 @@
+Para usar los programas de bitonicSort_openmp.c
+
+en shel escriba:
+
+$./bitonicOMP.out [fileName.txt]
+
+donde fileName es un archivo que es generado por
+el programa:
+
+generateBitonic.out, es decir este ejecutable, genera de manera similar al ejemplo
+en el archivo list.txt
+una serie de numeros
+
+en shell escribir:
+
+$./generateBitonic.out [numero]
+
+donde numero = 2^x, generara un archivo llamado "numeros.txt"
+el maximo numero para poder visualizar el numeros.txt (para abrir el archivo generado)
+es: 16384 = 2^14
+a partir de 2^15, el archivo no podra abrirse, debido a que sobrecarga un procesador
+( si esque usa un editor de textos ),
+sino en shell escribir:
+
+$cat numeros.txt
+
+y vera los numeros generados
+
+###############################################################3
+
+EJEMPLO DE EJCUCION:
+
+$./generateBitonic.out 1024
+
+*** Genera 1024 numeros en el fichero: numeros.txt
+
+$./bitonic.out numeros.txt
+
+*** Ordena por el algoritmo bitonic
+
+$./bitonicOMP.out numeros.txt
+
+*** Ordena por el algoritmo bitonic, usando OpenMP
+
+###############################################################3

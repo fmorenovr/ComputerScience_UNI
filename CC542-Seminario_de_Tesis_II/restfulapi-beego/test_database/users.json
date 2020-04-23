@@ -1,0 +1,516 @@
+db.users.insert([{
+	"id_user" : "U0001",
+	"name" : "Edgar",
+	"lastname" : "Huaranga",
+	"email" : "edhu1227@gmail.com",
+	"document" : "2010K",
+	"username" : "usuario9",
+	"password" : "123456",
+	"registration_date" : "2016-05-09 21:44:10",
+	"last_modification" : "2016-05-09 21:44:10",
+	"modules" : [
+		{
+			"id_moduleiot" : "C017",
+			"passwd" : "710C"
+		},
+		{
+			"id_moduleiot" : "C018",
+			"passwd" : "810C"
+		}
+	],
+	"alerts" : [
+		{
+			"id_alert" : "Alarm17",
+			"passwd" : "71Alarm"
+		},
+		{
+			"id_alert" : "Alarm18",
+			"passwd" : "81Alarm"
+		}
+	]
+},
+{
+	"id_user" : "U0002",
+	"name" : "Giovanny",
+	"lastname" : "Mondragon",
+	"email" : "giovanny1335@gmail.com",
+	"document" : "2011B",
+	"username" : "vgio",
+	"password" : "123456",
+	"registration_date" : "2016-05-09 21:44:10",
+	"last_modification" : "2016-05-09 21:44:10",
+	"modules" : [
+		{
+			"id_moduleiot" : "C001",
+			"passwd" : "100C"
+		},
+		{
+			"id_moduleiot" : "C002",
+			"passwd" : "200C"
+		}
+	],
+	"alerts" : [
+		{
+			"id_alert" : "Alarm1",
+			"passwd" : "1Alarm"
+		},
+		{
+			"id_alert" : "Alarm2",
+			"passwd" : "2Alarm"
+		}
+	]
+},
+{
+	"id_user" : "U0003",
+	"name" : "Michael",
+	"lastname" : "Vera",
+	"email" : "mvera@uni.pe",
+	"document" : "2013A",
+	"username" : "usuario1",
+	"password" : "123456",
+	"registration_date" : "2016-05-09 21:44:10",
+	"last_modification" : "2016-05-09 21:44:10",
+	"modules" : [
+		{
+			"id_moduleiot" : "C001",
+			"passwd" : "100C"
+		},
+		{
+			"id_moduleiot" : "C002",
+			"passwd" : "200C"
+		}
+	],
+	"alerts" : [
+		{
+			"id_alert" : "Alarm1",
+			"passwd" : "1Alarm"
+		},
+		{
+			"id_alert" : "Alarm2",
+			"passwd" : "2Alarm"
+		}
+	]
+},
+{
+	"id_user" : "U0004",
+	"name" : "Juan Diego",
+	"lastname" : "Guizado",
+	"email" : "jd.guizadov@uni.pe",
+	"document" : "2016A",
+	"username" : "usuario2",
+	"password" : "123456",
+	"registration_date" : "2016-05-09 21:44:10",
+	"last_modification" : "2016-05-09 21:44:10",
+	"modules" : [
+		{
+			"id_moduleiot" : "C003",
+			"passwd" : "300C"
+		},
+		{
+			"id_moduleiot" : "C004",
+			"passwd" : "400C"
+		}
+	],
+	"alerts" : [
+		{
+			"id_alert" : "Alarm3",
+			"passwd" : "3Alarm"
+		},
+		{
+			"id_alert" : "Alarm4",
+			"passwd" : "4Alarm"
+		}
+	]
+},
+{
+	"id_user" : "U0005",
+	"name" : "Manuel",
+	"lastname" : "Castillo",
+	"email" : "mcastillo@uni.edu.pe",
+	"document" : "2012B",
+	"username" : "usuario3",
+	"password" : "123456",
+	"registration_date" : "2016-05-09 21:44:10",
+	"last_modification" : "2016-05-09 21:44:10",
+	"modules" : [
+		{
+			"id_moduleiot" : "C005",
+			"passwd" : "500C"
+		},
+		{
+			"id_moduleiot" : "C006",
+			"passwd" : "600C"
+		}
+	],
+	"alerts" : [
+		{
+			"id_alert" : "Alarm5",
+			"passwd" : "5Alarm"
+		},
+		{
+			"id_alert" : "Alarm6",
+			"passwd" : "6Alarm"
+		}
+	]
+},
+{
+	"id_user" : "U0006",
+	"name" : "Oscar",
+	"lastname" : "Huarcaya",
+	"email" : "ohuarcaya.c@gmail.com",
+	"document" : "2014B",
+	"username" : "usuario4",
+	"password" : "123456",
+	"registration_date" : "2016-05-09 21:44:10",
+	"last_modification" : "2016-05-09 21:44:10",
+	"modules" : [
+		{
+			"id_moduleiot" : "C007",
+			"passwd" : "700C"
+		},
+		{
+			"id_moduleiot" : "C008",
+			"passwd" : "800C"
+		}
+	],
+	"alerts" : [
+		{
+			"id_alert" : "Alarm8",
+			"passwd" : "8Alarm"
+		},
+		{
+			"id_alert" : "Alarm7",
+			"passwd" : "7Alarm"
+		}
+	]
+},
+{
+	"id_user" : "U0007",
+	"name" : "Jesus",
+	"lastname" : "Lovon",
+	"email" : "jlovonm@uni.pe",
+	"document" : "2010G",
+	"username" : "usuario5",
+	"password" : "123456",
+	"registration_date" : "2016-05-09 21:44:10",
+	"last_modification" : "2016-05-09 21:44:10",
+	"modules" : [
+		{
+			"id_moduleiot" : "C009",
+			"passwd" : "900C"
+		},
+		{
+			"id_moduleiot" : "C010",
+			"passwd" : "010C"
+		}
+	],
+	"alerts" : [
+		{
+			"id_alert" : "Alarm9",
+			"passwd" : "9Alarm"
+		},
+		{
+			"id_alert" : "Alarm10",
+			"passwd" : "01Alarm"
+		}
+	]
+},
+{
+	"id_user" : "U0008",
+	"name" : "Gusseppe",
+	"lastname" : "Bravo",
+	"email" : "gbravor@uni.pe",
+	"document" : "2011B",
+	"username" : "usuario6",
+	"password" : "123456",
+	"registration_date" : "2016-05-09 21:44:10",
+	"last_modification" : "2016-05-09 21:44:10",
+	"modules" : [
+		{
+			"id_moduleiot" : "C011",
+			"passwd" : "110C"
+		},
+		{
+			"id_moduleiot" : "C012",
+			"passwd" : "210C"
+		}
+	],
+	"alerts" : [
+		{
+			"id_alert" : "Alarm11",
+			"passwd" : "11Alarm"
+		},
+		{
+			"id_alert" : "Alarm12",
+			"passwd" : "21Alarm"
+		}
+	]
+},
+{
+	"id_user" : "U0009",
+	"name" : "Raul",
+	"lastname" : "Arias",
+	"email" : "raul.arias.l@uni.pe",
+	"document" : "2009T",
+	"username" : "usuario7",
+	"password" : "123456",
+	"registration_date" : "2016-05-09 21:44:10",
+	"last_modification" : "2016-05-09 21:44:10",
+	"modules" : [
+		{
+			"id_moduleiot" : "C013",
+			"passwd" : "310C"
+		},
+		{
+			"id_moduleiot" : "C014",
+			"passwd" : "410C"
+		}
+	],
+	"alerts" : [
+		{
+			"id_alert" : "Alarm13",
+			"passwd" : "31Alarm"
+		},
+		{
+			"id_alert" : "Alarm14",
+			"passwd" : "41Alarm"
+		}
+	]
+},
+{
+	"id_user" : "U0010",
+	"name" : "Milner",
+	"lastname" : "Montesinos",
+	"email" : "milner.quispe.m@uni.pe",
+	"document" : "2008FT",
+	"username" : "usuario8",
+	"password" : "123456",
+	"registration_date" : "2016-05-09 21:44:10",
+	"last_modification" : "2016-05-09 21:44:10",
+	"modules" : [
+		{
+			"id_moduleiot" : "C015",
+			"passwd" : "510C"
+		},
+		{
+			"id_moduleiot" : "C016",
+			"passwd" : "610C"
+		}
+	],
+	"alerts" : [
+		{
+			"id_alert" : "Alarm15",
+			"passwd" : "15Alarm"
+		},
+		{
+			"id_alert" : "Alarm16",
+			"passwd" : "61Alarm"
+		}
+	]
+},
+{
+	"id_user" : "U0011",
+	"name" : "Kevin",
+	"lastname" : "Polo",
+	"email" : "kpruiz11@gmail.com",
+	"document" : "2003K",
+	"username" : "usuario10",
+	"password" : "123456",
+	"registration_date" : "2016-05-09 21:44:10",
+	"last_modification" : "2016-05-09 21:44:10",
+	"modules" : [
+		{
+			"id_moduleiot" : "C019",
+			"passwd" : "910C"
+		},
+		{
+			"id_moduleiot" : "C020",
+			"passwd" : "020C"
+		}
+	],
+	"alerts" : [
+		{
+			"id_alert" : "Alarm19",
+			"passwd" : "91Alarm"
+		},
+		{
+			"id_alert" : "Alarm20",
+			"passwd" : "02Alarm"
+		}
+	]
+}])
+db.users.insert({
+	"id_user" : "U0000",
+	"name" : "Felipe",
+	"lastname" : "Moreno",
+	"email" : "felipe.moreno.v@uni.pe",
+	"document" : "2012J",
+	"username" : "admin",
+	"password" : "etc9",
+	"registration_date" : "2016-05-09 21:44:10",
+	"last_modification" : "2016-05-09 21:44:10",
+	"modules" : [
+		{
+			"id_moduleiot" : "C001",
+			"passwd" : "100C"
+		},
+		{
+			"id_moduleiot" : "C002",
+			"passwd" : "200C"
+		},
+		{
+			"id_moduleiot" : "C003",
+			"passwd" : "300C"
+		},
+		{
+			"id_moduleiot" : "C004",
+			"passwd" : "400C"
+		},
+		{
+			"id_moduleiot" : "C005",
+			"passwd" : "500C"
+		},
+		{
+			"id_moduleiot" : "C006",
+			"passwd" : "600C"
+		},
+		{
+			"id_moduleiot" : "C007",
+			"passwd" : "700C"
+		},
+		{
+			"id_moduleiot" : "C008",
+			"passwd" : "800C"
+		},
+		{
+			"id_moduleiot" : "C009",
+			"passwd" : "900C"
+		},
+		{
+			"id_moduleiot" : "C010",
+			"passwd" : "010C"
+		},
+		{
+			"id_moduleiot" : "C011",
+			"passwd" : "110C"
+		},
+		{
+			"id_moduleiot" : "C012",
+			"passwd" : "210C"
+		},
+		{
+			"id_moduleiot" : "C013",
+			"passwd" : "310C"
+		},
+		{
+			"id_moduleiot" : "C014",
+			"passwd" : "410C"
+		},
+		{
+			"id_moduleiot" : "C015",
+			"passwd" : "510C"
+		},
+		{
+			"id_moduleiot" : "C016",
+			"passwd" : "610C"
+		},
+		{
+			"id_moduleiot" : "C017",
+			"passwd" : "710C"
+		},
+		{
+			"id_moduleiot" : "C018",
+			"passwd" : "810C"
+		},
+		{
+			"id_moduleiot" : "C019",
+			"passwd" : "910C"
+		},
+		{
+			"id_moduleiot" : "C020",
+			"passwd" : "020C"
+		}
+	],
+	"alerts" : [
+		{
+			"id_alert" : "Alarm1",
+			"passwd" : "1Alarm"
+		},
+		{
+			"id_alert" : "Alarm2",
+			"passwd" : "2Alarm"
+		},
+		{
+			"id_alert" : "Alarm3",
+			"passwd" : "3Alarm"
+		},
+		{
+			"id_alert" : "Alarm4",
+			"passwd" : "4Alarm"
+		},
+		{
+			"id_alert" : "Alarm5",
+			"passwd" : "5Alarm"
+		},
+		{
+			"id_alert" : "Alarm6",
+			"passwd" : "6Alarm"
+		},
+		{
+			"id_alert" : "Alarm7",
+			"passwd" : "7Alarm"
+		},
+		{
+			"id_alert" : "Alarm8",
+			"passwd" : "8Alarm"
+		},
+		{
+			"id_alert" : "Alarm9",
+			"passwd" : "9Alarm"
+		},
+		{
+			"id_alert" : "Alarm10",
+			"passwd" : "01Alarm"
+		},
+		{
+			"id_alert" : "Alarm11",
+			"passwd" : "11Alarm"
+		},
+		{
+			"id_alert" : "Alarm12",
+			"passwd" : "21Alarm"
+		},
+		{
+			"id_alert" : "Alarm13",
+			"passwd" : "31Alarm"
+		},
+		{
+			"id_alert" : "Alarm14",
+			"passwd" : "41Alarm"
+		},
+		{
+			"id_alert" : "Alarm15",
+			"passwd" : "51Alarm"
+		},
+		{
+			"id_alert" : "Alarm16",
+			"passwd" : "61Alarm"
+		},
+		{
+			"id_alert" : "Alarm17",
+			"passwd" : "71Alarm"
+		},
+		{
+			"id_alert" : "Alarm18",
+			"passwd" : "81Alarm"
+		},
+		{
+			"id_alert" : "Alarm19",
+			"passwd" : "91Alarm"
+		},
+		{
+			"id_alert" : "Alarm20",
+			"passwd" : "02Alarm"
+		}
+	]
+})

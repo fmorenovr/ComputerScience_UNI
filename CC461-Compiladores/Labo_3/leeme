@@ -1,0 +1,11 @@
+
+Usar el programa
+
+bash SetupPregs.sh [nombre_archivo]
+
+ejemplo:
+
+bash SetupPregs.sh pregunta1.y
+
+./pregunta1.y.output < ejemplo_Pregunta1.yvs
+

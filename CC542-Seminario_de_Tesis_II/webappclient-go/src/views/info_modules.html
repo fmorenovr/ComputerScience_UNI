@@ -1,0 +1,42 @@
+<h1 class="page-title">lista de <span class="fw-semi-bold">{{app.usr}}</span></h1>
+<ol class="breadcrumb">
+  <li>Se entuentra en:</li>
+  <li class="active">Info {{app.usr}}</li>
+</ol>
+<section class="container content-section" ng-controller="infoModulesController">
+  <div class="row">
+    <div class="col-md-6 col-lg-8">
+      <section class="widget">
+          <header>
+            <h4>
+              Datos de <span class="fw-semi-bold">{{app.usr}}</span>
+            </h4>
+          </header>
+          <div class="widget-body">
+            <table class="table table-condensed table-striped">
+              <thead>
+                <tr>
+                  <th>Id ModuleIoT</th>
+                  <th>Modelo</th>
+                  <th>Zona</th>
+                  <th>Longitud</th>
+                  <th>Latitud</th>
+                  <th>Fecha de Instalacion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="cansat in cansats">
+                  <td>{{cansat.id_moduleiot}}</td>
+                  <td>{{cansat.model}}</td>
+                  <td>{{cansat.zone}}</td>
+                  <td>{{cansat.longuitude}}</td>
+                  <td>{{cansat.latitude}}</td>
+                  <td>{{cansat.installation_date}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </section>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+Programa Ejemplo;
+Inicio
+  x=1;
+  y=3;
+  z=x+y-2^2-(x^2+1);
+  w=x<>y;
+  x=y+x;
+  a=5<3;
+  b=3<5;
+  t=4<=4;
+  k=4>=3;
+  q=4==3;
+Fin.

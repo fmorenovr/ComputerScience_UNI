@@ -1,0 +1,256 @@
+db.datameasured.insert({
+  "id_moduleiot":"C001",
+  "id_sensor":"TS0001",
+  "type":"Temperatura",
+  "value":34.5,
+  "date":"2017-01-31 11:13:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C001",
+  "id_sensor":"PS0001",
+  "type":"Presion",
+  "value":45.5,
+  "date":"2017-01-31 11:13:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C001",
+  "id_sensor":"MS0001",
+  "type":"Monoxido",
+  "value":50.05,
+  "date":"2017-01-31 11:13:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C002",
+  "id_sensor":"TS0002",
+  "type":"Temperatura",
+  "value":34.5,
+  "date":"2016-04-10 11:13:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C002",
+  "id_sensor":"PS0002",
+  "type":"Presion",
+  "value":45.5,
+  "date":"2016-04-10 11:13:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C002",
+  "id_sensor":"DS0001",
+  "type":"Dioxido",
+  "value":50.05,
+  "date":"2016-04-10 11:13:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C003",
+  "id_sensor":"TS0003",
+  "type":"Temperatura",
+  "value":34.5,
+  "date":"2016-04-10 11:13:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C003",
+  "id_sensor":"DS0002",
+  "type":"Dioxido",
+  "value":50.05,
+  "date":"2016-04-10 11:13:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C004",
+  "id_sensor":"DS0003",
+  "type":"Dioxido",
+  "value":50.05,
+  "date":"2016-04-10 11:13:15"
+})
+
+
+db.datameasured.insert({
+  "id_moduleiot":"C001",
+  "id_sensor":"TS0001",
+  "type":"Temperatura",
+  "value":31.5,
+  "date":"2016-04-10 15:37:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C001",
+  "id_sensor":"TS0001",
+  "type":"Temperatura",
+  "value":14.5,
+  "date":"2016-04-10 16:15:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C001",
+  "id_sensor":"PS0001",
+  "type":"Presion",
+  "value":2.5,
+  "date":"2016-04-10 16:15:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C001",
+  "id_sensor":"PS0001",
+  "type":"Presion",
+  "value":0.5,
+  "date":"2016-04-10 16:15:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C001",
+  "id_sensor":"MS0001",
+  "type":"Monoxido",
+  "value":0.05,
+  "date":"2016-04-10 16:15:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C001",
+  "id_sensor":"MS0001",
+  "type":"Monoxido",
+  "value":1.05,
+  "date":"2016-04-10 16:15:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C001",
+  "id_sensor":"MS0001",
+  "type":"Monoxido",
+  "value":0.25,
+  "date":"2016-04-10 16:15:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C002",
+  "id_sensor":"TS0002",
+  "type":"Temperatura",
+  "value":18.5,
+  "date":"2016-04-10 16:16:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C002",
+  "id_sensor":"TS0002",
+  "type":"Temperatura",
+  "value":22.5,
+  "date":"2016-04-10 16:16:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C002",
+  "id_sensor":"TS0002",
+  "type":"Temperatura",
+  "value":12.5,
+  "date":"2016-04-10 16:16:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C002",
+  "id_sensor":"TS0002",
+  "type":"Temperatura",
+  "value":32.5,
+  "date":"2016-04-10 16:16:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C002",
+  "id_sensor":"TS0002",
+  "type":"Temperatura",
+  "value":22.5,
+  "date":"2016-04-10 16:16:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C002",
+  "id_sensor":"TS0002",
+  "type":"Temperatura",
+  "value":25.5,
+  "date":"2016-04-10 16:16:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C002",
+  "id_sensor":"TS0002",
+  "type":"Temperatura",
+  "value":20.5,
+  "date":"2016-04-10 16:16:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C002",
+  "id_sensor":"TS0002",
+  "type":"Temperatura",
+  "value":21.5,
+  "date":"2016-04-10 16:16:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C002",
+  "id_sensor":"TS0002",
+  "type":"Temperatura",
+  "value":13.5,
+  "date":"2016-04-10 16:16:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C002",
+  "id_sensor":"TS0002",
+  "type":"Temperatura",
+  "value":28.5,
+  "date":"2016-04-10 16:16:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C002",
+  "id_sensor":"TS0002",
+  "type":"Temperatura",
+  "value":26.5,
+  "date":"2016-04-10 16:16:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C002",
+  "id_sensor":"PS0002",
+  "type":"Presion",
+  "value":1.5,
+  "date":"2016-04-10 16:16:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C002",
+  "id_sensor":"PS0002",
+  "type":"Presion",
+  "value":2.5,
+  "date":"2016-04-10 16:16:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C002",
+  "id_sensor":"DS0001",
+  "type":"Dioxido",
+  "value":120.5,
+  "date":"2016-04-10 16:16:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C002",
+  "id_sensor":"DS0001",
+  "type":"Dioxido",
+  "value":320.5,
+  "date":"2016-04-10 16:16:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C003",
+  "id_sensor":"TS0003",
+  "type":"Temperatura",
+  "value":21.5,
+  "date":"2016-04-10 16:16:15"
+})
+
+db.datameasured.insert({
+  "id_moduleiot":"C003",
+  "id_sensor":"TS0003",
+  "type":"Temperatura",
+  "value":19.5,
+  "date":"2016-04-10 16:16:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C003",
+  "id_sensor":"TS0003",
+  "type":"Temperatura",
+  "value":32.5,
+  "date":"2016-04-10 16:16:15"
+})
+db.datameasured.insert({
+  "id_moduleiot":"C003",
+  "id_sensor":"DS0002",
+  "type":"Dioxido",
+  "value":22.5,
+  "date":"2016-04-10 16:16:15"
+})
+
+db.datameasured.insert({
+  "id_moduleiot":"C003",
+  "id_sensor":"DS0002",
+  "type":"Dioxido",
+  "value":12.5,
+  "date":"2016-04-10 16:16:15"
+})

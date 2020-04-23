@@ -1,0 +1,73 @@
+<div class="container-fluid" ng-controller="LogoutController">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+        <li>
+          <!-- whether to automatically collapse sidebar on mouseleave. If activated acts more like usual admin templates -->
+          <a class="hidden-sm hidden-xs" href="#" data-sn-action="toggle-navigation-state" title="Turn on/off sidebar collapsing" data-placement="bottom" data-tooltip>
+              <i class="fa fa-bars fa-lg"></i>
+          </a>
+          <!-- shown on xs & sm screen. collapses and expands navigation -->
+          <a class="visible-sm visible-xs" data-sn-action="toggle-navigation-collapse-state" href="#" title="Show/hide sidebar" data-placement="bottom" data-tooltip>
+              <span class="rounded rounded-lg bg-gray text-white visible-xs"><i class="fa fa-bars fa-lg"></i></span>
+              <i class="fa fa-bars fa-lg hidden-xs"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right visible-xs">
+        <li class="dropdown" data-dropdown>
+          <a class="dropdown-toggle dropdown-toggle-notifications" data-dropdown-toggle id="notifications-dropdown-toggle">
+            <li><a ng-click="logout()"><i class="fa fa-sign-out" title="Log out"></i> &nbsp; Logout</a></li>
+          </a>
+        </li>
+      </ul>
+      <!-- xs & sm screen logo -->
+      <a class="navbar-brand visible-xs" data-ui-sref="app.page({ page: 'home', child: null })">
+        <i class="fa fa-circle text-gray mr-n-sm"></i>
+        <i class="fa fa-circle text-warning"></i>
+        &nbsp;
+        {{app.name}}
+        &nbsp;
+        <i class="fa fa-circle text-warning mr-n-sm"></i>
+        <i class="fa fa-circle text-gray"></i>
+      </a>
+    </div>
+
+    <!-- this part is hidden for xs screens -->
+    <div class="collapse navbar-collapse">
+        <!-- search form! link it to your search server -->
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <div class="input-group input-group-no-border">
+                    <span class="input-group-addon">
+                        <i class="fa fa-search"></i>
+                    </span>
+                    <input class="form-control" type="text" placeholder="Search Dashboard">
+                </div>
+            </div>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown" data-dropdown>
+              <a href class="dropdown-toggle dropdown-toggle-notifications" data-dropdown-toggle id="notifications-dropdown-toggle">
+                      <span class="thumb-sm avatar pull-left">
+                          <img class="img-circle" src="/images/avatar.png" alt="..."></img>
+                      </span>
+                  &nbsp; user: <strong>{{app.username}}</strong>&nbsp;
+                      <!--<span class="circle bg-warning fw-bold"> 13 </span> -->
+                  <!-- <b class="caret"></b> -->
+              </a>
+              <!-- ready to use notifications dropdown. inspired by smartadmin template.
+                   consists of three components:
+                   notifications, messages, progress. leave or add what's important for you.
+                   uses Sing's ajax-load plugin for async content loading. See #load-notifications-btn -->
+              <ul class="dropdown-menu">
+                  <li><a data-ui-sref="app.page({ page: 'home', child: null })"><i class="glyphicon glyphicon-user"></i> &nbsp; Mi Cuenta</a></li>
+                  <li class="divider"></li>
+                  <li><a ng-click="logout()"><i class="fa fa-sign-out"></i> &nbsp; Logout</a></li>
+                  <footer class="panel-footer text-sm">
+                  <span class="fs-mini">Logeado: {{app.dateLogin}}</span>
+                </footer>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div>

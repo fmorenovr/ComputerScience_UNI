@@ -1,0 +1,16 @@
+1. escriba una gramatica que acepte operaciones combinadas incluyendo parentesis y potencia.
+
+2. Escribir una analizador lexico que acepte como cadena valida a los numeros en notacion  aEc, a es un numero entre 1 y 10, n es un numero entero. Ejemplo 2.3E6 = 23000000
+
+3. escriba un compilador tal que la siguiente entrada sea valida:
+
+Libreria#uno.x#
+libreria#dos.x#
+Programa Ejemplo;
+Variables Real x,y,z;
+
+Inicio
+x=2.3E1;
+y=1.2E4-(x^2 - 2.E2);
+z=x+(y-1.2E4);
+Fin

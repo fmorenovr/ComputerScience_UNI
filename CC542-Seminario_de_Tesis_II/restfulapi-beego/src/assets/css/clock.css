@@ -1,0 +1,10 @@
+.clock {
+    max-width: 160px;
+    margin-top: 2em;
+    padding: 1em;
+}
+
+.clock input,
+.clock span {
+    border-color: #999;
+}

@@ -1,0 +1,25 @@
+Switch: 2954-24
+
+  click derecho, Command Line Interface
+  ENABLE (activa)
+  config ter (lo alista para cpnfigurar)
+  hostname meow (cambia nombre)
+  exit (sale)
+  config ter
+  line console 0 (para ejecutar comandos de consola)
+  password 123 (para poner password)
+  login ( confirma contrasena)
+  exit
+  exit
+  enable password pive (clave para ingresar al switch)
+
+Server: PT
+  DNS service ON, name: meow.com, address 192.168.16.100
+
+Router:
+  fastethernet 0/0 ---> switch 192.168.2.1
+  serial       0/0 ---> Router 192.168.0.1
+  RIP routing: 192.168.0.0
+  
+serial DCE (conexion router-router)
+copper     (PC-PC/PC-Switch/Switch/Router)

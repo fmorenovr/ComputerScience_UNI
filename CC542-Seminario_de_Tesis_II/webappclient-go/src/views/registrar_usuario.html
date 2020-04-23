@@ -1,0 +1,109 @@
+<ol class="breadcrumb">
+  <li>Se entuentra en:</li>
+  <li class="active">Registrar usuario </li>
+</ol>
+<section class="container content-section" ng-controller="RegistrarUsuarioController">
+  <div class="row">
+    <div class="col-md-8">
+      <!-- minimal widget consist of .widget class. note bg-transparent - it can be any background like bg-gray, bg-primary, bg-white -->
+      <section class="widget"> <!-- ng-controller="GeoLocationsWidgetDemoController" -->
+        <!-- .widget-body is a mostly semantic class. may be a sibling to .widget>header or .widget>footer -->
+        <div class="widget-body">
+        <!-- for this particular example we also need to preload us map, as this is mapael's extension -->
+          <form id="goform" class="form-horizontal" role="form" ng-submit="registrar()">
+            <fieldset>
+              <legend><strong>Registrar</strong> usuario</legend>
+              <div class="form-group">
+                <label for="normal-field" class="col-sm-4 control-label">Nombres:</label>
+                <div class="col-sm-7">
+                  <input type="text" ng-model="nombres" id="normal-field" class="form-control" placeholder="nombres" data-tooltip-placement="top" data-tooltip="Nombres" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="hint-field" class="col-sm-4 control-label"> Apellidos:</label>
+                <div class="col-sm-7">
+                  <input type="text" ng-model="apellidos" id="hint-field" class="form-control" placeholder="apellidos" data-tooltip-placement="top" data-tooltip="Apellidos" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="hint-field" class="col-sm-4 control-label"> Documento de indentidad:<span class="help-block">DNI o Carne de extranjeria</span>
+                </label>
+                <div class="col-sm-7">
+                  <input type="text" ng-model="documento" id="hint-field" class="form-control" placeholder="documento de identidad" data-tooltip-placement="top" data-tooltip="Documento de Identidad" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="hint-field" class="col-sm-4 control-label"> Email:</label>
+                <div class="col-sm-7">
+                  <input type="text" ng-model="email" id="hint-field" class="form-control" placeholder="email" data-tooltip-placement="top" data-tooltip="Email" required>
+                  <span ng-if="email_error" style="margin: 10px 0px;padding:12px;color: #D8000C;background-color: #FFBABA;" class="help-block">
+                    <i class="fa fa-times-circle"></i>
+                      Email Incorrecto
+                  </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label" for="prepended-input">Username:</label>
+                <div class="col-sm-7">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input id="prepended-input" ng-model="username" class="form-control" size="16" type="text" placeholder="Username" data-tooltip-placement="top" data-tooltip="Username" required>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label" for="password-field">Password:</label>
+                <div class="col-sm-7">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input type="password" ng-model="password" id="password-field" class="form-control" disabled="disabled"
+                           placeholder="Password" data-tooltip-placement="top" data-tooltip="Password" value="{{password}}">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label" for="disabled-input">Fecha:</label>
+                <div class="col-sm-7">
+                  <input type="text" id="disabled-input" class="form-control"
+                         disabled="disabled" value="{{f_registro}}" >
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label" for="disabled-input">Hora:</label>
+                <div class="col-sm-7">
+                  <input type="text" id="disabled-input" class="form-control"
+                         disabled="disabled" value="{{h_registro}}" >
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label" for="disabled-input">Modules:<span class="help-block">Asociados</span></label>
+                <div class="col-sm-7">
+                  <fieldset  data-ng-repeat="choice in list_modules">
+                    <div class="checkbox checkbox-info checkbox-circle" class="action-checkbox">
+                      <input type="checkbox" id="{{choice.id_moduleiot}}" value="{{choice.id_moduleiot}}" 
+                             ng-checked="checkboxSelected.indexOf(choice.id_moduleiot) > -1"
+                             ng-click="toggleSelection(choice.id_moduleiot)">
+                      <label for="{{choice.id_moduleiot}}">{{choice.id_moduleiot}}</label>
+                    </div>
+			            </fieldset>
+                </div>
+              </div>
+              <span ng-if="mostrar" style="margin: 10px 0px;padding:12px;color: #4F8A10;background-color: #DFF2BF;" class="help-block">
+                <i class="fa fa-check"></i>
+                  Registro correctamente
+              </span>
+            </fieldset>
+            <div class="form-actions">
+              <div class="row">
+                <div class="col-sm-offset-4 col-sm-7">
+                  <button type="submit" class="btn btn-primary">Registrar Usuario</button>
+                  <button type="reset" class="btn btn-inverse">Cancelar</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

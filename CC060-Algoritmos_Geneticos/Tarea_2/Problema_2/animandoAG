@@ -1,0 +1,12 @@
+#We will plot sin(x+t) in this gif animation
+reset
+set term gif animate delay 100
+set output "animate.gif"
+n=100
+set xrange [-10:10]
+set yrange [-10:10]
+set zrange [-2:4]
+set view 15,30
+set isosamples 100
+load "animate.gnuplot"
+set output

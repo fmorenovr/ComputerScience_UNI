@@ -1,0 +1,93 @@
+***** metodo de un solo proceso
+***** A 160x160, B 160x90
+$ gcc matrixMulti.c -o mm.out
+$ time ./mm.out
+
+Inicializando arrays...
+El proceso demoro 0.01115100s de tiempo.
+
+... Imprime matrices ...
+
+real	0m0.701s
+user	0m0.031s
+sys	  0m0.000s
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+***** metodo MPI, hace 3 procesos copia + el original
+***** A 160x160, B 160x90
+$ mpicc matrixMultiMPI.c -o mmMPI.out
+$ time mpiexec -np 4 ./mmMPI.out
+
+MPI se inicializa con 4 procesos copia.
+Inicializando arrays...
+Enviando 54 filas a la tarea 1, compensado=0
+Enviando 53 filas a la tarea 2, compensado=54
+Enviando 53 filas a la tarea 3, compensado=107
+Recibido desde el proceso: 1
+Recibido desde el proceso: 2
+Recibido desde el proceso: 3
+
+El proceso paralelizado en MPI demoro 0.00245380s de tiempo.
+
+... Imprime matrices ...
+
+real	0m0.630s
+user	0m0.924s
+sys	  0m0.085s
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+***** metodo openMP, Hace uso de 4 threads para la region paralela
+***** A 160x160, B 160x90
+$ gcc matrixMulti_openmp.c -o mmomp.out -fopenmp
+$ time ./mmomp.out
+
+openMP se inicializa con 4 threads.
+Inicializando arrays...
+Thread 3 empieza a multiplicar...
+Thread=3 hace la fila=120
+Thread 1 empieza a multiplicar...
+Thread=1 hace la fila=40
+Thread 0 empieza a multiplicar...
+Thread=0 hace la fila=0
+Thread=3 hace la fila=121
+Thread=1 hace la fila=41
+Thread=0 hace la fila=1
+Thread=3 hace la fila=122
+Thread=3 hace la fila=123
+Thread=1 hace la fila=42
+Thread 2 empieza a multiplicar...
+Thread=3 hace la fila=154
+Thread=3 hace la fila=155
+Thread=0 hace la fila=19
+Thread=3 hace la fila=156
+Thread=0 hace la fila=20
+Thread=3 hace la fila=157
+Thread=3 hace la fila=158
+Thread=0 hace la fila=21
+Thread=3 hace la fila=159
+Thread=0 hace la fila=22
+Thread=0 hace la fila=23
+Thread=0 hace la fila=24
+Thread=0 hace la fila=37
+Thread=1 hace la fila=68
+Thread=2 hace la fila=90
+Thread=0 hace la fila=38
+Thread=2 hace la fila=91
+Thread=2 hace la fila=92
+Thread=0 hace la fila=39
+Thread=2 hace la fila=93
+Thread=2 hace la fila=114
+Thread=2 hace la fila=115
+Thread=2 hace la fila=116
+...
+El proceso paralelizado en openMP demoro 0.01975877s de tiempo.
+
+... Imprime matrices ...
+
+real	0m0.675s
+user	0m0.065s
+sys	  0m0.023s

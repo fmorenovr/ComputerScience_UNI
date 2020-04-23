@@ -1,0 +1,32 @@
+db.fognodes.insert({
+  "id_fognode":"FN0001",
+  "name":"UNI",
+  "accessPoint":"F4:F2:6D:EE:9C:B0",
+  "private_ip":"192.168.1.103",
+  "latitude": -12.0173721,
+  "longuitude": -77.0507113,
+  "registration_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "modules":[
+    "C001","C002","C003","C004", "C005","C006","C007","C008", "C009","C010","C011","C012", "C013","C014","C015","C016", "C017","C018","C019","C020"
+  ],
+  "alerts":[
+    "Alarm1", "Alarm2"
+  ]
+})
+db.fognodes.insert({
+  "id_fognode":"FN0002",
+  "name":"CTIC",
+  "accessPoint":"F6:B2:8C:EF:8C:A3",
+  "private_ip":"192.168.1.104",
+  "latitude": -12.0173726,
+  "longuitude": -77.0507116,
+  "registration_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "modules":[
+    "C005","C006","C007","C008"
+  ],
+  "alerts":[
+    "Alarm5", "Alarm6", "Alarm7", "Alarm8"
+  ]
+})

@@ -1,0 +1,112 @@
+<ol class="breadcrumb">
+  <li>Se entuentra en:</li>
+  <li class="active">Modificar usuario </li>
+</ol>
+<section class="container content-section" ng-controller="ModificarUsuarioController">
+  <div class="row">
+    <div class="col-md-8">
+      <!-- minimal widget consist of .widget class. note bg-transparent - it can be any background like bg-gray, bg-primary, bg-white -->
+      <section class="widget"> <!-- ng-controller="GeoLocationsWidgetDemoController" -->
+        <!-- .widget-body is a mostly semantic class. may be a sibling to .widget>header or .widget>footer -->
+        <div class="widget-body">
+          <div class="col-md-2 col-lg-2">
+            <section class="widget">
+              <header>
+                <h4>
+                  Id <span class="fw-semi-bold">Usuario</span>
+                </h4>
+              </header>
+              <div class="widget-body">
+                <select ng-model="usuario_watch">
+                  <option ng-repeat="susuario in listusuarios" value="{{susuario.username}}">
+                  {{susuario.username}}
+                  </option>
+                </select>
+              </div>
+            </section>
+          </div>
+        <!-- for this particular example we also need to preload us map, as this is mapael's extension -->
+          <form id="goform" class="form-horizontal" role="form" ng-submit="actualizar()">
+            <fieldset>
+              <legend><strong>Modificar</strong> </legend>
+              <div class="form-group">
+                <label for="normal-field" class="col-sm-4 control-label">Nombres:</label>
+                <div class="col-sm-7">
+                  <input type="text" id="nombre" class="form-control" placeholder="nombres" data-tooltip-placement="top" data-tooltip="Nombres" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="hint-field" class="col-sm-4 control-label">Apellidos:</label>
+                <div class="col-sm-7">
+                  <input type="text" id="apellido" class="form-control" placeholder="apellidos" data-tooltip-placement="top" data-tooltip="Apellidos" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="hint-field" class="col-sm-4 control-label">Documento de indentidad:<span class="help-block">DNI o Carne de extranjeria</span></label>
+                <div class="col-sm-7">
+                  <input type="text" id="documento" class="form-control" placeholder="documento de identidad"
+                         data-tooltip-placement="top" data-tooltip="Documento de Identidad" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="hint-field" class="col-sm-4 control-label">Email:</label>
+                <div class="col-sm-7">
+                  <input type="text" id="email" class="form-control" placeholder="email"
+                         data-tooltip-placement="top" data-tooltip="Email" required>
+	                <span ng-if="email_error" style="margin: 10px 0px;padding:12px;color: #D8000C;background-color: #FFBABA;" class="help-block">
+                    <i class="fa fa-times-circle"></i>
+                      Email Incorrecto
+                  </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label" for="prepended-input">Username:</label>
+                <div class="col-sm-7">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input id="username" class="form-control" size="16" type="text" placeholder="Username" data-tooltip-placement="top" data-tooltip="Username" required>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label" for="password-field">Password:</label>
+                <div class="col-sm-7">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input type="text" id="password" class="form-control"
+                           placeholder="Password" data-tooltip-placement="top" data-tooltip="Password">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label" for="disabled-input">Modules:<span class="help-block">Asociados</span></label>
+                <div class="col-sm-7">
+			            <fieldset  data-ng-repeat="choice in list_modules">
+                    <div class="checkbox checkbox-info checkbox-circle" class="action-checkbox">
+                      <input type="checkbox" id="{{choice.id_moduleiot}}" value="{{choice.id_moduleiot}}" 
+                             ng-checked="checkboxSelected.indexOf(choice.id_moduleiot) > -1"
+                             ng-click="toggleSelection(choice.id_moduleiot)">
+                      <label for="{{choice.id_moduleiot}}">{{choice.id_moduleiot}}</label>
+                    </div>
+			            </fieldset>
+                </div>
+              </div>
+              <span ng-if="mostrar" style="margin: 10px 0px;padding:12px;color: #4F8A10;background-color: #DFF2BF;" class="help-block">
+                <i class="fa fa-check"></i>
+                  Modificado correctamente
+              </span>
+            </fieldset>
+            <div class="form-actions">
+              <div class="row">
+                <div class="col-sm-offset-4 col-sm-7">
+                  <button type="submit" class="btn btn-primary">Actualizar Usuario</button>
+                  <!--<button type="reset" class="btn btn-inverse">Cancelar</button>-->
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

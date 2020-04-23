@@ -1,0 +1,58 @@
+Usando la cadena:
+
+10000011100 * 10001 - 1011010 
+
+|----------------------------------------------------------------------------------------------------|
+|  Estado                |     Cadena               |        Acciones                                |
+|------------------------+--------------------------+------------------------------------------------|
+| 0                      |  NUM MULT NUM MENOS NUM  |  aceptado, ir a S1                             |
+| 01                     |  NUM MULT NUM MENOS NUM  |  Desplazar, ir a S4                            |
+| 014                    |      MULT NUM MENOS NUM  |  Reduce R28 (del 4), goto(1,dig1)              |
+| 01                     |      MULT NUM MENOS NUM  |  ir S21                                        |
+| 01(21)                 |      MULT NUM MENOS NUM  |  Reduce R25 (del 21), goto(1,dig)              |
+| 01                     |      MULT NUM MENOS NUM  |  ir S20                                        |
+| 01(20)                 |      MULT NUM MENOS NUM  |  Reduce R24 (del 20), goto(1,term3)            |
+| 01                     |      MULT NUM MENOS NUM  |  ir S19                                        |
+| 01(19)                 |      MULT NUM MENOS NUM  |  Reduce R21 (del 19), goto(1,term2)            |
+| 01                     |      MULT NUM MENOS NUM  |  ir S18                                        |
+| 01(18)                 |      MULT NUM MENOS NUM  |  Reduce R19 (del 18), goto(1,term)             |
+| 01                     |      MULT NUM MENOS NUM  |  ir S17                                        |
+| 01(17)                 |      MULT NUM MENOS NUM  |  Desplazar, ir a S34                           |
+| 01(17)(34)             |           NUM MENOS NUM  |  Desplazar, ir a S4                            |
+| 01(17)(34)4            |               MENOS NUM  |  Reduce R28 (del 4), goto(34,dig1)             |
+| 01(17)(34)             |               MENOS NUM  |  ir S21                                        |
+| 01(17)(34)(21)         |               MENOS NUM  |  Reduce R25 (del 21), goto(34,dig)             |
+| 01(17)(34)             |               MENOS NUM  |  ir S20                                        |
+| 01(17)(34)(20)         |               MENOS NUM  |  Reduce R24 (del 20), goto(34,term3)           |
+| 01(17)(34)             |               MENOS NUM  |  ir S19                                        |
+| 01(17)(34)(19)         |               MENOS NUM  |  Reduce R21 (del 19), goto(34,term2)           |
+| 01(17)(34)             |               MENOS NUM  |  ir S46                                        |
+| 01(17)(34)(46)         |               MENOS NUM  |  Reduce R17 (del 46,34,17), goto(1,term)       |
+| 01                     |               MENOS NUM  |  ir S17                                        |
+| 01(17)                 |               MENOS NUM  |  Reduce R16 (del 17), goto(1,expr)             |
+| 01                     |               MENOS NUM  |  ir S16                                        |
+| 01(16)                 |               MENOS NUM  |  Desplazar, ir a S33                           |
+| 01(16)(33)             |                     NUM  |  Desplazar, ir a S4                            |
+| 01(16)(33)4            |                       $  |  Reduce R28 (del 4), goto(33,dig1)             |
+| 01(16)(33)             |                       $  |  ir S21                                        |
+| 01(16)(33)(21)         |                       $  | Reduce R25 (del 21), goto(33,dig)              |
+| 01(16)(33)             |                       $  |  ir S20                                        |
+| 01(16)(33)(20)         |                       $  | Reduce R24 (del 20), goto(33,term3)            |
+| 01(16)(33)             |                       $  |  ir S19                                        |
+| 01(16)(33)(19)         |                       $  | Reduce R21 (del 19), goto(33,term2)            |
+| 01(16)(33)             |                       $  |  ir S18                                        |
+| 01(16)(33)(18)         |                       $  | Reduce R19 (del 18), goto(33,term)             |
+| 01(16)(33)             |                       $  | ir S44                                         |
+| 01(16)(33)(44)         |                       $  | Reduce R19 (del 45,33,16), goto(1,term2)       |
+| 01                     |                       $  | ir S18                                         |
+| 01(18)                 |                       $  | Reduce R15 (del 18), goto(1,term)              |
+| 01                     |                       $  | ir S17                                         |
+| 01(17)                 |                       $  | Reduce R15 (del 17), goto(1,expr)              |
+| 01                     |                       $  | ir S16                                         |
+| 01(16)                 |                       $  | Reduce R12 (del 16), goto(1,evalExpr)          |
+| 01                     |                       $  | ir S15                                         |
+| 01(15)                 |                       $  | Reduce R7 (del 1), goto(0,instruction)         |
+| 0                      |                       $  | ir S1                                          |
+| 01                     |                       $  | $end, ir S2                                    |
+| 012                    |                 aceptado | fin                                            |
+|----------------------------------------------------------------------------------------------------|

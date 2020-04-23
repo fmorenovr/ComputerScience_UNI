@@ -1,0 +1,7 @@
+no repetir id usuario/fognodes/modules/sensores/alertas
+
+modificar la estructura de los fognode (el gateway)
+
+modificar las condiciones de cada alarma
+
+modificar estructura de los alertMeaured

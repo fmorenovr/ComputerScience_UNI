@@ -1,0 +1,9 @@
+procedure Validate {
+  begin {
+    DoThis
+    Dothat
+  }
+  end {
+    CleanUp
+  }
+}

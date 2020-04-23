@@ -1,0 +1,46 @@
+[System]
+Name='fuzzy'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=3
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='TMC'
+Range=[0 1]
+NumMFs=2
+MF1='low':'trapmf',[-0.9 -0.1 0.15 0.675339366515837]
+MF2='high':'trapmf',[0.205 0.6788 1.06 1.07]
+
+[Input2]
+Name='MP'
+Range=[0 1]
+NumMFs=2
+MF1='low':'trapmf',[-0.36 -0.04 0.1999 0.628]
+MF2='high':'trapmf',[0.225 0.668552036199095 1.1 1.9]
+
+[Input3]
+Name='FP'
+Range=[0 1]
+NumMFs=2
+MF1='low':'trapmf',[-0.36 -0.04 0.2436 0.632]
+MF2='high':'trapmf',[0.24 0.485688729874776 1.11 1.91]
+
+[Output1]
+Name='PCQ'
+Range=[0 1]
+NumMFs=3
+MF1='very_low':'trapmf',[-0.36 -0.04 0.04 0.36]
+MF2='low':'trapmf',[0.14 0.46 0.54 0.86]
+MF3='high':'trapmf',[0.64 0.96 1.04 1.36]
+
+[Rules]
+2 2 1, 3 (1) : 1
+2 1 2, 2 (1) : 1
+2 2 2, 3 (1) : 1

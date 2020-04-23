@@ -1,0 +1,14 @@
+Problema 1:
+Para el programa Modelo_AR2
+Evalue el desempeno del filtro adaptativo para diferetnes epoch
+
+Epoch   MSE
+  10
+  50
+ 150
+ 200
+
+
+
+Problema 2:
+

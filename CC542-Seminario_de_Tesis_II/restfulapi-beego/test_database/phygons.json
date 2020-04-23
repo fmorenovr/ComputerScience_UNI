@@ -1,0 +1,57 @@
+db.fognodes.insert({
+  "id_fognode":"FN0001",
+  "public_ip":"32.58.120.10",
+  "gateway":"192.168.1.100",
+  "modules":[
+    "C001","C002"
+  ],
+  "alerts":[
+    "Alarm1", "Alarm3"
+  ]
+})
+
+db.modulesiot.insert({
+  "id_moduleiot":"C001",
+  "sensors":[
+    {
+      "id_sensor":"TS0001",
+      "type":"Temperatura",
+      "state":"private",
+    },
+    {
+      "id_sensor":"PS0001",
+      "type":"Presion",
+      "state":"free",
+    },
+    {
+      "id_sensor":"MS0001",
+      "type":"Monoxido",
+      "state":"private",
+    },
+    {
+      "id_sensor":"DS0002",
+      "type":"Dioxido",
+      "state":"private",
+    }
+  ]
+})
+db.modulesiot.insert({
+  "id_moduleiot":"C002",
+  "sensors":[
+    {
+      "id_sensor":"TS0002",
+      "type":"Temperatura",
+      "state":"private",
+    },
+    {
+      "id_sensor":"PS0002",
+      "type":"Presion",
+      "state":"private",
+    },
+    {
+      "id_sensor":"DS0001",
+      "type":"Dioxido",
+      "state":"free",
+    }
+  ]
+})

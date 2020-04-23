@@ -1,0 +1,41 @@
+db.users.insert([{
+  "id_user":"U0001",
+  "name":"Edgar",
+  "lastname":"Huaranga",
+  "email":"edhu1227@gmail.com",
+  "document":"2010K",
+  "username":"edhu",
+  "password":"123456",
+  "registration_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "fognodes":[
+    "FN0002"
+   ]
+},{
+  "id_user":"U0002",
+  "name":"Giovanny",
+  "lastname":"Mondragon",
+  "email":"giovanny1335@gmail.com",
+  "document":"2011B",
+  "username":"vgio",
+  "password":"123456",
+  "registration_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "fognodes":[
+    "FN0001"
+   ]
+}])
+db.users.insert({
+  "id_user":"U0000",
+  "name":"Felipe",
+  "lastname":"Moreno",
+  "email":"dohko_libra1995@hotmail.com",
+  "document":"2012I",
+  "username":"admin",
+  "password":"etc9",
+  "registration_date":"2016-05-09 21:44:10",
+  "last_modification":"2016-05-09 21:44:10",
+  "fognodes":[
+    "FN0001","FN0002","FN0003"
+   ]
+})

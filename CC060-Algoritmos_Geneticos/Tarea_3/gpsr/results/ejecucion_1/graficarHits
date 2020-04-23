@@ -1,0 +1,1 @@
+plot 'res1' using 1:4 title 'res1' w p lt 4

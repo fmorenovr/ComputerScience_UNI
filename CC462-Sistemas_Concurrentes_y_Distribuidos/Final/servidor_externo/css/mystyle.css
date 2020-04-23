@@ -1,0 +1,23 @@
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+body {
+  color: #fff;
+  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+}
+
+hr{
+	background: white;
+}
+
+#menu{
+	background-color: ;
+	padding: 3%;
+}
+
+.miTabla{
+	background-color: #F0F8FF;
+	color: black;
+}

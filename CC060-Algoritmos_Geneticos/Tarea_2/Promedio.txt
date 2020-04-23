@@ -1,0 +1,7 @@
+En 100 Ejecuciones:
+
+EL promedio del programa sin elitismo fue de: 0.91550
+La varianza del programa sin elitismo fue de: 0.4563
+
+El promedio del programa con elitismo fue de: 0.97654
+La varianza del programa con elitismo fue de: 0.21564

@@ -1,0 +1,5 @@
+Program nomPro;
+Begin
+  x:=4;
+  y:=4+9;
+End.

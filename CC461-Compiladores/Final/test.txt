@@ -1,0 +1,21 @@
+[
+Programa Ejemplo
+    Var x=1,y=100,s=0;
+    Si x<y
+    [
+        Sumar desde x hasta y
+        [
+            s = s + x^2;
+        ]
+        Imprimir s;
+    ]
+    sinosi x=y
+    [
+        Imprimir 0;
+    ]
+    sino
+    [
+        Imprimir asdasd;
+    ]
+
+]

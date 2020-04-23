@@ -1,0 +1,127 @@
+<h1 class="page-title">Charts - <span class="fw-semi-bold">{{app.usr}}</span></h1>
+<ol class="breadcrumb">
+  <li>Se entuentra en:</li>
+  <li class="active">{{app.usr}}</li>
+</ol>
+<section class="container content-section" ng-controller="chartsModulesController">
+  <div class="row">
+    <div class="col-md-11 col-lg-3">
+      <section class="widget">
+        <header>
+          <h4>
+            Id de <span class="fw-semi-bold">{{app.usr}}</span>
+          </h4>
+        </header>
+        <div class="widget-body">
+          <select ng-model="dispositivo">
+              <option ng-repeat="idcansat in cansats" value="{{idcansat.id_moduleiot}}">
+              {{idcansat.id_moduleiot}}
+              </option>
+          </select>
+        </div>
+      </section>
+    </div>
+    <div class="col-md-10 col-lg-5">
+      <section class="widget">
+        <header>
+          <h4>
+            Lista de sensores en el {{app.usr}}</br>
+          </h4>
+        </header>
+        <div>
+          <table class="table table-condensed table-striped">
+              <thead>
+                <tr>
+                  <th>Id Sensor</th>
+                  <th>Tipo Sensor</th>
+                  <th>Unidad</th>
+                  <th>Modelo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="sensor in sensores">
+                  <td>{{sensor.id_sensor}}</td>
+                  <td>{{sensor.tipo_sensor}}</td>
+                  <td>{{sensor.unidad}}</td>
+                  <td>{{sensor.modelo}}</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+      </section>
+    </div>
+  </div ng-show="showT">
+    <div class="col-md-10 col-lg-11" ng-if="tempShow">
+      <section class="widget">
+        <header>
+          <h4>
+            Grafica de los datos sensados Temperatura
+          </h4>
+        </header>
+        <div id="tempChart" style="height:280px;">
+          <svg></svg>
+        </div>
+        <!--<div data-nvd3-chart data-chart="TempChart" data-datum="TempData">
+          <svg></svg>
+        </div>-->
+        <!--<div>
+          <canvas id="line" class="chart chart-line" chart-colors="colors"
+                  chart-labels="labels"
+                  chart-options="T.options"
+                  chart-data="T.data"
+                  chart-series="T.series" 
+                  chart-dataset-override="T.datasetOverride" >
+          </canvas>
+        </div>-->
+      </section>
+    </div>
+    <div class="col-md-10 col-lg-11" ng-if="presionShow">
+      <section class="widget">
+        <header>
+          <h4>
+            Grafica de los datos sensados Presion
+          </h4>
+        </header>
+        <div id="presionChart" style="height:280px;">
+          <svg></svg>
+        </div>
+      </section>
+    </div>
+    <div class="col-md-10 col-lg-11" ng-if="monoxidoShow">
+      <section class="widget">
+        <header>
+          <h4>
+            Grafica de los datos sensados Monoxido
+          </h4>
+        </header>
+        <div id="monoxidoChart" style="height:280px;">
+          <svg></svg>
+        </div>
+      </section>
+    </div>
+    <div class="col-md-10 col-lg-11" ng-if="dioxidoShow">
+      <section class="widget">
+        <header>
+          <h4>
+            Grafica de los datos sensados Dioxido
+          </h4>
+        </header>
+        <div id="dioxidoChart" style="height:280px;">
+          <svg></svg>
+        </div>
+      </section>
+    </div>
+    <div class="col-lg-10 col-xg-10" ng-if="emptyData">
+      <section>
+        <header>
+          <h4>
+            <span class="fw-semi-bold">Datos no disponibles</span>
+          </h4>
+        </header>
+        <div>
+          <li> No hay data sensada de este sensor en este modulo</li>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+Usando la cadena:
+
+X:=2*5-4/3;
+
+|--------------------------------------------------------------------------------------------------------------------------------|
+|  Estado                |     Cadena                                           |        Acciones                                |
+|------------------------+------------------------------------------------------+------------------------------------------------|
+| 0                      |  ID ':' IGUAL NUM '*' NUM MENOS NUM '/' NUM PUNTCOM  |  Desplazar, ir a S1                            |
+| 01                     |     ':' IGUAL NUM '*' NUM MENOS NUM '/' NUM PUNTCOM  |  Desplazar, ir a S4                            |
+| 014                    |         IGUAL NUM '*' NUM MENOS NUM '/' NUM PUNTCOM  |  Desplazar, ir a S7                            |
+| 0147                   |               NUM '*' NUM MENOS NUM '/' NUM PUNTCOM  |  Desplazar, ir a S9                            |
+| 01479                  |                   '*' NUM MENOS NUM '/' NUM PUNTCOM  |  Reduce, R10 (del 9), goto(7,fact)             |
+| 0147(12)               |                   '*' NUM MENOS NUM '/' NUM PUNTCOM  |  Reduce, R9 (del 12), goto(7,term)             |
+| 0147(11)               |                   '*' NUM MENOS NUM '/' NUM PUNTCOM  |  Desplazar, ir a S16                           |
+| 0147(11)(16)           |                       NUM MENOS NUM '/' NUM PUNTCOM  |  Desplazar, ir a S9                            |
+| 0147(11)(16)9          |                           MENOS NUM '/' NUM PUNTCOM  |  Reduce, R10 (del 9), goto(16,fact)            |
+| 0147(11)(16)(20)       |                           MENOS NUM '/' NUM PUNTCOM  |  Reduce, R7 (del 11,16,20), goto(7,term)       |
+| 0147(11)               |                           MENOS NUM '/' NUM PUNTCOM  |  Reduce, R5 (del 11), goto(7,expr)             |
+| 0147(10)               |                           MENOS NUM '/' NUM PUNTCOM  |  Desplazar, ir a S15                           |
+| 0147(10)(15)           |                                 NUM '/' NUM PUNTCOM  |  Desplazar, ir a S9                            |
+| 0147(10)(15)9          |                                     '/' NUM PUNTCOM  |  Reduce, R10 (del 9), goto(15,fact)            |
+| 0147(10)(15)12         |                                     '/' NUM PUNTCOM  |  Reduce, R9 (del 12), goto(15,term)            |
+| 0147(10)(15)19         |                                     '/' NUM PUNTCOM  |  Desplazar, ir a S17                           |
+| 0147(10)(15)19(17)     |                                         NUM PUNTCOM  |  Desplazar, ir a S9                            |
+| 0147(10)(15)19(17)9    |                                             PUNTCOM  |  Reduce, R10 (del 9), goto(17,fact)            |
+| 0147(10)(15)19(17)(21) |                                             PUNTCOM  |  Reduce, R8 (del 21,17,19), goto(15,term)      |
+| 0147(10)(15)19         |                                             PUNTCOM  |  Reduce, R6 (del 19,15,10), goto(7,expr)       |
+| 0147(10)               |                                             PUNTCOM  |  Desplazar, ir al S13                          |
+| 0147(10)(13)           |                                                   $  |  Reduce, R3 (del 13,10,7,4,1), goto(0,instr)   |
+| 03                     |                                                   $  |  Reduce, R2 no pide reducir, ir a S6           |
+| 036                    |                                                   $  |  Reduce, R1 (del 6, 3), goto(0,listainstr)     |
+| 0                      |                                                   $  |  ir a S2                                       |
+| 02                     |                                                   $  |  Desplazar, ir a S5                            |
+| 025                    |                                                   -  |  Aceptado                                      |
+|--------------------------------------------------------------------------------------------------------------------------------|

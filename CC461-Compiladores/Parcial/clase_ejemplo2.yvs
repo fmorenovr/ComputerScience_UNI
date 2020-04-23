@@ -1,0 +1,13 @@
+publica vacio Principal()
+{
+  publica clase1 instancia = nueva  clase1 ();
+  publica Entero casa ( Entero var1 , Entero var2 , Entero var3 )
+  {
+    Entero var2 = instancia:funcion1(var1,true);
+    retorna var2 ;
+  }
+  entero suma(entero a, entero b){
+    entero c = a+b;
+    retorna c;
+  }
+}

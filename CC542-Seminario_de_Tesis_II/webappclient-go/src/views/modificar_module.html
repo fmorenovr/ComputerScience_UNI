@@ -1,0 +1,172 @@
+<ol class="breadcrumb">
+  <li>Se entuentra en:</li>
+  <li class="active">Modificar IoTDevice </li>
+</ol>
+<section class="container content-section" ng-controller="ModificarModuleController">
+  <div class="row">
+    <div class="col-md-8">
+      <!-- minimal widget consist of .widget class. note bg-transparent - it can be any background like bg-gray, bg-primary, bg-white -->
+      <section class="widget"> <!-- ng-controller="GeoLocationsWidgetDemoController" -->
+        <!-- .widget-body is a mostly semantic class. may be a sibling to .widget>header or .widget>footer -->
+        <div class="widget-body">
+          <div class="col-md-2 col-lg-2">
+            <section class="widget">
+              <header>
+                <h4>
+                  Id <span class="fw-semi-bold">{{app.usr}}</span>
+                </h4>
+              </header>
+              <div class="widget-body">
+                <select ng-model="cansat_watch">
+                  <option ng-repeat="cans in listcansats" value="{{cans.id_moduleiot}}">
+                  {{cans.id_moduleiot}}
+                  </option>
+                </select>
+              </div>
+            </section>
+          </div>
+        <!-- for this particular example we also need to preload us map, as this is mapael's extension -->
+          <form id="goform" class="form-horizontal" role="form" ng-submit="actualizar()">
+            <fieldset>
+              <legend><strong>Modificar</strong></legend>
+              <div class="form-group">
+                <label for="normal-field" class="col-sm-4 control-label">Modelo:</label>
+                <div class="col-sm-7">
+                  <input type="text" ng-model="modelo" class="form-control" placeholder="modelo" data-tooltip-placement="top" data-tooltip="modelo" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="hint-field" class="col-sm-4 control-label"> Latitud:</label>
+                <div class="col-sm-7">
+                  <input type="text" ng-model="latitud" class="form-control" placeholder="latitud" data-tooltip-placement="top" data-tooltip="latitud" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="hint-field" class="col-sm-4 control-label"> Longuitud: </label>
+                <div class="col-sm-7">
+                  <input type="text" ng-model="longuitud" class="form-control" placeholder="longuitud" data-tooltip-placement="top" data-tooltip="longuitud" required>
+                  <span ng-if="pos_error" style="margin: 10px 0px;padding:12px;color: #D8000C;background-color: #FFBABA;" class="help-block">
+                    <i class="fa fa-times-circle"></i>
+                      Posicion Incorrecta
+                  </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label" for="prepended-input">Zona:</label>
+                <div class="col-sm-7">
+                  <input type="text" ng-model="zona" class="form-control" size="16" placeholder="zona" data-tooltip-placement="top" data-tooltip="zona" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label" for="prepended-input">Sector:</label>
+                <div class="col-sm-7">
+                  <input type="text" ng-model="sector" class="form-control" size="16" placeholder="sector" data-tooltip-placement="top" data-tooltip="sector" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label" for="prepended-input">Pos:</label>
+                <div class="col-sm-7">
+                  <div class="input-group">
+                    <fieldset  data-ng-repeat="choice in pospolygons">
+                      <div><span><br></span></div>
+				              <input type="text" id="pos_latitude" class="form-control"
+				                     ng-model="choice.latitude" size="16" placeholder="latitud"
+				                     data-tooltip-placement="top" data-tooltip="Latitud" required>
+				                     
+                      <input type="text" id="pos_longuitude" class="form-control"
+                             ng-model="choice.longuitude" placeholder="Longuitud"
+                             data-tooltip-placement="top" data-tooltip="longuitud" required>
+                      
+				            </fieldset>
+				          </div>
+				        </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label" for="prepended-input">Añadir pos:</label>
+                <div class="col-sm-7">
+                  <button class="btn btn-inverse width-100 mb-xs addfields" type="button" ng-click="addNewPos()">
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+                <label class="col-sm-4 control-label" for="prepended-input">Quitar pos:</label>
+                <div class="col-sm-7">
+                  <button class="btn btn-inverse width-100 mb-xs remove" type="button" ng-click="removePos()">
+                    <i class="fa fa-minus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label" for="prepended-input">Sensores:</label>
+                <div class="col-sm-7">
+                  <div class="input-group">
+                    <fieldset  data-ng-repeat="choice in iotdevices">
+                      <div><span><br></span></div>
+				              <input type="text" id="tipo_sensor" class="form-control"
+				                     ng-model="choice.type" size="16" placeholder="Tipo sensor"
+				                     data-tooltip-placement="top" data-tooltip="Tipo sensor" required>
+				              <div><span><br></span></div>
+				              <span ng-if="choice.error_tipo" style="margin: 10px 0px;padding:12px;color: #D8000C;background-color: #FFBABA;" class="help-block">
+                        <i class="fa fa-times-circle"></i>
+                          Tipo Incorrecto
+                      </span>
+				              
+                      <input type="text" id="modelo_sensor" class="form-control"
+                             ng-model="choice.model" placeholder="modelo de sensor"
+                             data-tooltip-placement="top" data-tooltip="modelo" required>
+                             
+                      <input type="text" id="state_sensor" class="form-control" placeholder="State"
+                             ng-model="choice.state" data-tooltip-placement="top" data-tooltip="state" required>
+                      <div><span><br></span></div>
+				              <span ng-if="choice.error_state" style="margin: 10px 0px;padding:12px;color: #D8000C;background-color: #FFBABA;" class="help-block">
+                        <i class="fa fa-times-circle"></i>
+                          State Incorrecto
+                      </span>
+                      
+                      <input type="text" id="unidad_sensor" class="form-control"
+                             disabled="disabled" value="{{choice.unit}}"placeholder="Unidad"
+                             data-tooltip-placement="top" data-tooltip="unidad">
+                             
+                      <input type="text" id="disabled-input" class="form-control"
+                             disabled="disabled" value="{{app.getDatesSensors(choice.date_installed)[0]}}" data-tooltip-placement="top"
+                             data-tooltip="hora de instalacion">
+                             
+                      <input type="text" id="disabled-input" class="form-control"
+                             disabled="disabled" value="{{app.getDatesSensors(choice.date_installed)[1]}}" data-tooltip-placement="top"
+                             data-tooltip="fecha de instalacion">
+				            </fieldset>
+				          </div>
+				        </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label" for="prepended-input">Añadir sensor:</label>
+                <div class="col-sm-7">
+                  <button class="btn btn-inverse width-100 mb-xs addfields" type="button" ng-click="addNewIoTDevice()">
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+                <label class="col-sm-4 control-label" for="prepended-input">Quitar sensor:</label>
+                <div class="col-sm-7">
+                  <button class="btn btn-inverse width-100 mb-xs remove" type="button" ng-click="removeIoTDevice()">
+                    <i class="fa fa-minus"></i>
+                  </button>
+                </div>
+              </div>
+              <span ng-if="mostrar" style="margin: 10px 0px;padding:12px;color: #4F8A10;background-color: #DFF2BF;" class="help-block">
+                <i class="fa fa-check"></i>
+                  Modificado correctamente
+              </span>
+            </fieldset>
+            <div class="form-actions">
+              <div class="row">
+                <div class="col-sm-offset-4 col-sm-7">
+                  <button type="submit" class="btn btn-primary">Actualizar IoTDevice</button>
+                  <!--<button type="reset" class="btn btn-inverse">Cancelar</button>-->
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

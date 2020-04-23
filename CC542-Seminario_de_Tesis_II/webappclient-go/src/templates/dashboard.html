@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="beagonsDashboard">
+  <head>
+    <title>BeaGons! - Dashboard</title>
+    <link rel="shortcut icon" type="image/ico" href="/assets/images/favicon.ico" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- aplication CSS -->
+    <link rel="stylesheet" href="/assets/css/application.min.css">
+    <link rel="stylesheet" href="/assets/css/clock.css">
+    <link rel="stylesheet" href="/assets/dependencies/jquery-ui/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="/assets/dependencies/clockpicker-gh-pages/dist/bootstrap-clockpicker.min.css">
+    <!-- as of IE9 cannot parse css files with more that 4K classes separating in two files -->
+    <!--[if IE 9]>
+        <link href="css/application-ie9-part2.css" rel="stylesheet">
+    <![endif]-->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=&libraries=visualization"></script>
+    <script>
+    </script>
+  </head>
+  <!-- sn-demo directive enables all functions which are used for demo. e.g. animating notifications count, chat unread messages.
+       to be removed in real app-->
+  <body ng-strict-di data-ng-controller="dashboardAppController" data-sn-demo data-ng-class="{'nav-static': app.state['nav-static'],'login-page': loginPage, 'error-page': errorPage}">
+    <div class="app" id="app" data-ui-view></div>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+
+    <!-- include jquery BEFORE angular so $(el).html() may resolve scripts. see http://stackoverflow.com/a/12200540/1298418 -->
+    <script type="text/javascript" src="/assets/dependencies/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/dependencies/jquery-ui/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="/assets/dependencies/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/assets/dependencies/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="/assets/dependencies/ngstorage/ngStorage.min.js"></script>
+    <script type="text/javascript" src="/assets/dependencies/angular-resource/angular-resource.min.js"></script>
+    <script type="text/javascript" src="/assets/dependencies/angular-ui-utils/event.min.js"></script>
+    <script type="text/javascript" src="/assets/dependencies/angular-animate/angular-animate.min.js"></script>
+    <script type="text/javascript" src="/assets/dependencies/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="/assets/dependencies/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="/assets/dependencies/angular-bootstrap-select/build/angular-bootstrap-select.min.js"></script>
+
+    <!-- page specific angular libs. may be removed -->
+    <script type="text/javascript" src="/assets/dependencies/datatables/media/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="/assets/dependencies/angular-datatables/dist/angular-datatables.min.js"></script>
+    <script type="text/javascript" src="/assets/dependencies/angular-datatables/dist/plugins/bootstrap/angular-datatables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/dependencies/angular-ui-calendar/src/calendar.js"></script>
+
+    <!-- clockpicker -->
+    <script type="text/javascript" src="/assets/dependencies/clockpicker-gh-pages/dist/bootstrap-clockpicker.min.js"></script>
+
+    <!-- graphics -->
+    <script type="text/javascript" src="/assets/dependencies/d3/d3.min.js"></script>
+    <script type="text/javascript" src="/assets/dependencies/nvd3/build/nv.d3.min.js"></script>
+
+    <!-- cookies -->
+    <script type="text/javascript" src="/assets/dependencies/angular-cookies/angular-cookies.min.js"></script>
+
+    <!-- JWT  -->
+    <script type="text/javascript" src="/assets/dependencies/angular-jwt/dist/angular-jwt.min.js"></script>
+
+    <!-- Paho Client Mqtt -->
+    <script type="text/javascript" src="/assets/dependencies/angular-mqtt/src/browserMqtt.js"></script>
+    <script type="text/javascript" src="/assets/dependencies/web-mqtt-client/mqttws31.min.js"></script>
+    
+    <!--<script type="text/javascript" src="/assets/dependencies/angular-mqtt/src/angular-MQTT.js"></script>-->
+    
+    <!-- Modulos para el Mapa -->
+    <script type="text/javascript" src="/assets/dependencies/ngmap/build/scripts/ng-map.min.js"></script>
+    <script type="text/javascript" src="/assets/dependencies/gmaps/gmaps.js"></script>
+    
+    <!-- common libs. previous bootstrap-sass version was used, but due to a need to have single compiled file using bootstrap's version -->
+    <script type="text/javascript" src="/assets/dependencies/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/dependencies/slimScroll/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="/assets/dependencies/widgster/widgster.js"></script>
+    <script data-pace-options='{ "target": ".content-wrap", "ghostTime": 1000 }' type="text/javascript" src="/assets/dependencies/pace.js/pace.min.js"></script>
+    <script type="text/javascript" src="/assets/dependencies/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
+
+  <!-- common app js -->
+    <script src="/angularJS-app/main.js"></script>
+    <script src="/angularJS-app/app.js"></script>
+
+    <!-- routers -->
+    <script src="/angularJS-app/routers/router.js"></script>
+
+    <!-- constants -->
+    <script src="/angularJS-app/constants/dashboardAppConstant.js"></script>
+    <script src="/angularJS-app/constants/infoServicesConstant.js"></script>
+
+    <!-- values -->
+    <script src="/angularJS-app/values/dashboardAppValue.js"></script>
+    <script src="/angularJS-app/values/decorationValue.js"></script>
+    <script src="/angularJS-app/values/uiJqDependenciesValue.js"></script>
+    
+    <!-- filters -->
+    <script src="/angularJS-app/filters/dashboardAppFilter.js"></script>
+    <script src="/angularJS-app/filters/reverseFilter.js"></script>
+    <script src="/angularJS-app/filters/decorateFilter.js"></script>
+    
+    <!-- services -->
+    <!-- providers -->
+    <!-- decorators -->
+    
+    <!-- factories -->
+    <script src="/angularJS-app/factories/dashboardAppFactory.js"></script>
+    <script src="/angularJS-app/factories/consultasFactory.js"></script>
+    <script src="/angularJS-app/factories/mqttWebClientFactory.js"></script>
+    <script src="/angularJS-app/factories/scriptLoaderFactory.js"></script>
+    <script src="/angularJS-app/factories/exceptionHandlerFactory.js"></script>
+    
+    <!-- directives -->
+    <script src="/angularJS-app/directives/dashboardAppDirective.js"></script>
+    <script src="/angularJS-app/directives/bodyDirective.js"></script>
+    <!-- sn directives -->
+    <script src="/angularJS-app/directives/snProgressAnimateDirective.js"></script>
+    <script src="/angularJS-app/directives/snActionDirective.js"></script>
+    <script src="/angularJS-app/directives/snNavigationDirective.js"></script>
+    <script src="/angularJS-app/directives/snChatSideBarDirective.js"></script>
+    <script src="/angularJS-app/directives/snNotificationsMenuDirective.js"></script>
+    <!-- directives wrapers - plugins - classes --> 
+    <script src="/angularJS-app/directives/inputGroupNoBorderDirective.js"></script>
+    <script src="/angularJS-app/directives/inputGroupTransparentDirective.js"></script>
+    <script src="/angularJS-app/directives/checkAllDirective.js"></script>
+    <script src="/angularJS-app/directives/widgetDirective.js"></script>
+    <script src="/angularJS-app/directives/ajaxLoadDirective.js"></script>
+    <!-- directives demo can be removed -->
+    <script src="/angularJS-app/directives/snDemoDirective.js"></script>
+    <script src="/angularJS-app/directives/messengerDemoDirective.js"></script>
+    <script src="/angularJS-app/directives/snGridDemoDirective.js"></script>
+    <script src="/angularJS-app/directives/snBackgridDemoDirective.js"></script>
+    <script src="/angularJS-app/directives/snGmapDirective.js"></script>
+    <script src="/angularJS-app/directives/snGalleryDirective.js"></script>
+    <script src="/angularJS-app/directives/snMapaelLayersMapDirective.js"></script>
+    <script src="/angularJS-app/directives/animateNumberDirective.js"></script>
+    <script src="/angularJS-app/directives/bootstrapCalendarDirective.js"></script>
+    <script src="/angularJS-app/directives/rickshawChartDirective.js"></script>
+    <script src="/angularJS-app/directives/bootstrapWizardDirective.js"></script>
+    <script src="/angularJS-app/directives/bootstrapApplicationWizardDirective.js"></script>
+    <script src="/angularJS-app/directives/liveTileDirective.js"></script>
+    <script src="/angularJS-app/directives/flotChartDirective.js"></script>
+    <script src="/angularJS-app/directives/flotChartAnimatorDirective.js"></script>
+    <script src="/angularJS-app/directives/nvd3ChartDirective.js"></script>
+    <script src="/angularJS-app/directives/morrisChartDirective.js"></script>
+    <script src="/angularJS-app/directives/skyConDirective.js"></script>
+    <script src="/angularJS-app/directives/jqSparkLineDirective.js"></script>
+    <script src="/angularJS-app/directives/uiSwitchDirective.js"></script>
+    <script src="/angularJS-app/directives/dropzoneDirective.js"></script>
+    
+    <!-- controllers -->
+    <script src="/angularJS-app/controllers/dashboardAppController.js"></script>
+    <script src="/angularJS-app/controllers/homeController.js"></script>
+    <script src="/angularJS-app/controllers/loginController.js"></script>
+    <script src="/angularJS-app/controllers/logoutController.js"></script>
+    <script src="/angularJS-app/controllers/registrarUsuariosController.js"></script>
+    <script src="/angularJS-app/controllers/registrarModulesController.js"></script>
+    <script src="/angularJS-app/controllers/modificarUsuariosController.js"></script>
+    <script src="/angularJS-app/controllers/modificarModulesController.js"></script>
+    <script src="/angularJS-app/controllers/eliminarUsuariosController.js"></script>
+    <script src="/angularJS-app/controllers/eliminarModulesController.js"></script>
+    <script src="/angularJS-app/controllers/infoUsuariosController.js"></script>
+    <script src="/angularJS-app/controllers/infoModulesController.js"></script>
+    <script src="/angularJS-app/controllers/infoSensoresController.js"></script>
+    <script src="/angularJS-app/controllers/infoModulesAdminController.js"></script>
+    <script src="/angularJS-app/controllers/chartsHistoricoController.js"></script>
+    <script src="/angularJS-app/controllers/chartsSensoresController.js"></script>
+    <script src="/angularJS-app/controllers/chartsModulesController.js"></script>
+    <script src="/angularJS-app/controllers/mapsModulesController.js"></script>
+    <script src="/angularJS-app/controllers/mapsheatGMapsController.js"></script>
+  <!-- page specific libs -->
+
+  </body>
+</html>

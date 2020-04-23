@@ -1,0 +1,5 @@
+#inchat {
+    word-wrap: break-word;
+    height: 100vh;
+    overflow-y: auto;
+}

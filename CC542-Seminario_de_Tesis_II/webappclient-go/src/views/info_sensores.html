@@ -1,0 +1,58 @@
+<h1 class="page-title">lista de <span class="fw-semi-bold">{{app.sensor}}</span></h1>
+<ol class="breadcrumb">
+  <li>Se entuentra en:</li>
+  <li class="active">Info {{app.sensor}}</li>
+</ol>
+<section class="container content-section" ng-controller="infoSensoresController">
+  <div class="row">
+    <div class="col-md-2 col-lg-2">
+      <section class="widget">
+        <header>
+          <h4>
+            Id de <span class="fw-semi-bold">Modulo</span>
+          </h4>
+        </header>
+        <div class="widget-body">
+          <select ng-model="modulo_watch">
+            <option ng-repeat="smodulo in list_modulos" value="{{smodulo.id_moduleiot}}">
+              {{smodulo.id_moduleiot}}
+            </option>
+          </select>
+        </div>
+      </section>
+    </div>
+    <div class="col-md-6 col-lg-8">
+      <section class="widget">
+          <header>
+            <h4>
+              Datos de <span class="fw-semi-bold">{{app.sensor}}</span>
+            </h4>
+          </header>
+          <div class="widget-body">
+            <table class="table table-condensed table-striped">
+              <thead>
+                <tr>
+                  <th>Id ModuleIoT</th>
+                  <th>Id Sensor</th>
+                  <th>Tipo Sensor</th>
+                  <th>Unidad</th>
+                  <th>Modelo</th>
+                  <th>Fecha de Instalacion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="sensor in sensores">
+                  <td>{{sensor.id_cansat}}</td>
+                  <td>{{sensor.id_sensor}}</td>
+                  <td>{{sensor.tipo_sensor}}</td>
+                  <td>{{sensor.unidad}}</td>
+                  <td>{{sensor.modelo}}</td>
+                  <td>{{sensor.date_installed}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </section>
+    </div>
+  </div>
+</section>

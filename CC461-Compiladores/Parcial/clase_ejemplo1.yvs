@@ -1,0 +1,38 @@
+clase publica clase1 
+{
+  publica Entero var1 ;
+  privada Entero var2 ;
+  privada CASA var2 ;
+  publica Booleano bol2 ;
+
+  publica CASA fun1 ( )
+  {
+    si ( var3 == sal1 and var3<=var1){
+      var3 = var3 + 1 ;
+      si ( var3 == sal1 and var3<=var1 or var3>var1){
+      var3 = var3 + 1 ;
+    }
+    sino {
+      var3 = var3 -1;
+    }
+    }
+    sino {
+      var3 = var3 -1;
+    }
+    si ( verdadero){
+      var3 = var3 + 5;
+    }
+    si ( var3 == sal1 and var3<=var1){
+      var3 = var3 + 1 ;
+    }
+    retorna casita ;
+  }
+}
+
+clase publica casa
+{
+  publica Entero casa ( Entero var1  )
+  {
+    retorna var2 ;
+  }
+}

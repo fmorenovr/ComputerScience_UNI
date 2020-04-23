@@ -1,0 +1,120 @@
+<!-- need this .js class to initiate slimscroll -->
+<div class="js-sidebar-content">
+    <header class="logo hidden-xs">
+        <a data-ui-sref="app.page({ page: 'home', child: null })">{{app.name}}</a>
+    </header>
+    <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
+         looks good, so adding it and enhancing with notifications -->
+    <div class="sidebar-status visible-xs">
+        <a data-ui-sref="app.page({ page: 'home', child: null })" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="thumb-sm avatar pull-left">
+                    <img class="img-circle" src="/images/avatar.png" alt="..."></img>
+                </span>
+            <!-- .circle is a pretty cool way to add a bit of beauty to raw data.
+                 should be used with bg-* and text-* classes for colors -->
+                <!--<span class="circle bg-warning fw-bold text-gray-dark">
+                    13
+                </span>-->
+            &nbsp;Hola  <strong>{{app.username}}</strong>&nbsp;
+        </a>
+        <!-- #notifications-dropdown-menu goes here when screen collapsed to xs or sm -->
+    </div>
+    <!-- main notification links are placed inside of .sidebar-nav -->
+    <h5 class="sidebar-nav-title">Acciones <a class="action-link" href="#"><i class="glyphicon glyphicon-leaf"></i></a></h5>
+    <ul class="sidebar-nav">
+      <li>
+        <a class="collapsed" data-target="#sidebar-micuenta" data-toggle="collapse" data-parent="#sidebar">
+          <span class="icon">
+            <i class="fa fa-user"></i>
+          </span>
+          Mi Cuenta
+          <i class="toggle fa fa-angle-down"></i>
+        </a>
+        <ul id="sidebar-micuenta" class="collapse">
+          <li><a data-ui-sref="app.page({ page: 'home', child: null })">Sobre mi ...</a></li>
+        </ul>
+      </li>
+      <li ng-if="app.issuperuser == 'true'">
+        <a class="collapsed" data-target="#sidebar-regmof" data-toggle="collapse" data-parent="#sidebar">
+          <span class="icon">
+            <i class="fa fa-desktop"></i>
+          </span>
+          Administrar
+          <i class="toggle fa fa-angle-down"></i>
+        </a>
+        <ul id="sidebar-regmof" class="collapse">
+          <li>
+            <a class="collapsed" data-target="#sidebar-sub-levels-user" data-toggle="collapse" data-parent="#sidebar-levels">
+              Usuario
+              <i class="toggle fa fa-angle-down"></i>
+            </a>
+            <ul id="sidebar-sub-levels-user" class="collapse">
+              <li><a data-ui-sref="app.page({ page: 'registrar', child: 'usuario' })">Añadir usuario</a></li>
+              <li><a data-ui-sref="app.page({ page: 'modificar', child: 'usuario' })">Modificar usuario</a></li>
+              <li><a data-ui-sref="app.page({ page: 'eliminar', child: 'usuario' })">Eliminar usuario</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="collapsed" data-target="#sidebar-sub-levels-modules" data-toggle="collapse" data-parent="#sidebar-levels">
+              {{app.usr}}
+              <i class="toggle fa fa-angle-down"></i>
+            </a>
+            <ul id="sidebar-sub-levels-modules" class="collapse">
+              <li><a data-ui-sref="app.page({ page: 'registrar', child: 'module' })">Añadir {{app.usr}}</a></li>
+              <li><a data-ui-sref="app.page({ page: 'modificar', child: 'module' })">Modificar {{app.usr}}</a></li>
+              <li><a data-ui-sref="app.page({ page: 'eliminar', child: 'module' })">Eliminar {{app.usr}}</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <!-- an example of nested submenu. basic bootstrap collapse component -->
+        <a class="collapsed" data-target="#sidebar-info" data-toggle="collapse" data-parent="#sidebar">
+          <span class="icon">
+            <i class="fa fa-info"></i>
+          </span>
+          Informacion
+          <i class="toggle fa fa-angle-down"></i>
+        </a>
+        <ul id="sidebar-info" class="collapse">
+            <li ng-if="app.issuperuser == 'true'"><a data-ui-sref="app.page({ page: 'info', child: 'usuarios' })">Usuarios</a></li>
+            <li ng-if="app.issuperuser == 'true'"><a data-ui-sref="app.page({ page: 'info', child: 'modules_admin' })">{{app.usr}}</a></li>
+            <li ng-if="app.issuperuser == 'false'"><a data-ui-sref="app.page({ page: 'info', child: 'modules' })">{{app.usr}}</a></li>
+            <li><a data-ui-sref="app.page({ page: 'info', child: 'sensores' })">{{app.sensor}}</a></li>
+            <!--<li><a data-ui-sref="login">Login Page</a></li>-->
+        </ul>
+      </li>
+      <h5 class="sidebar-nav-title">Visualizar data <a class="action-link" href="#"><i class="glyphicon glyphicon-leaf"></i></a></h5>
+      <li>
+        <a class="collapsed" data-target="#sidebar-charts" data-toggle="collapse" data-parent="#sidebar" >
+          <span class="icon">
+            <i class="glyphicon glyphicon-stats"></i>
+          </span>
+          Graficas
+          <i class="toggle fa fa-angle-down"></i>
+        </a>
+        <ul id="sidebar-charts" class="collapse">
+          <li><a data-ui-sref="app.page({ page: 'charts', child: 'modules' })">{{app.usr}}</a></li>
+          <li><a data-ui-sref="app.page({ page: 'charts', child: 'sensores' })">{{app.sensor}}</a></li>
+          <li><a data-ui-sref="app.page({ page: 'charts', child: 'historico' })">Historico</a></li>
+        </ul>
+      </li>
+    </ul>
+    <!-- every .sidebar-nav may have a title -->
+    <h5 class="sidebar-nav-title">Localizaciones <a class="action-link" href="#"><i class="glyphicon glyphicon-leaf"></i></a></h5>
+    <ul class="sidebar-nav">
+      <li>
+        <a class="collapsed" data-target="#sidebar-maps" data-toggle="collapse" data-parent="#sidebar">
+          <span class="icon">
+            <i class="glyphicon glyphicon-map-marker"></i>
+          </span>
+          Mapas
+          <i class="toggle fa fa-angle-down"></i>
+        </a>
+        <ul id="sidebar-maps" class="collapse">
+          <li><a data-ui-sref="app.page({ page: 'maps', child: 'modules' })">{{app.usr}} Locations</a></li>
+          <li><a data-ui-sref="app.page({ page: 'maps', child: 'heatGMaps' })">HeatMaps</a></li>
+        </ul>
+      </li>
+    </ul>
+</div>

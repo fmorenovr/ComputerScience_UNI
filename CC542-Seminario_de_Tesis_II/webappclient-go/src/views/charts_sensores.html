@@ -1,0 +1,78 @@
+<h1 class="page-title">Charts - <span class="fw-semi-bold">{{app.sensor}}</span></h1>
+<ol class="breadcrumb">
+  <li>Se entuentra en:</li>
+  <li class="active">{{app.sensor}}</li>
+</ol>
+<section class="container content-section" ng-controller="chartsSensoresController">
+  <div class="row">
+    <div class="col-md-6 col-lg-3">
+      <section class="widget">
+        <header>
+          <h4>
+            Tipos de <span class="fw-semi-bold">{{app.sensor}}</span>
+          </h4>
+        </header>
+        <div class="widget-body">
+          <select ng-model="tipo_sensor">
+            <option ng-repeat="sensortipo in sensorestipo" value="{{sensortipo}}">
+            {{sensortipo}}
+            </option>
+          </select>
+        </div>
+      </section>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <section class="widget">
+        <header>
+          <h4>
+            Id de <span class="fw-semi-bold">{{app.usr}}</span>
+          </h4>
+        </header>
+        <div class="widget-body">
+          <select ng-model="dispositivo">
+            <!--<option value="todos">todos</option>-->
+            <option ng-repeat="dispositivo in dispositivos" value="{{dispositivo.id_moduleiot}}">
+            {{dispositivo.id_moduleiot}}
+            </option>
+          </select>
+        </div>
+      </section>
+    </div>
+    <div class="col-md-10 col-lg-11" ng-if="dispsensShow">
+      <section class="widget">
+        <header>
+          <h4>
+            Grafica de los datos sensados
+          </h4>
+        </header>
+        <div id="dispsensChart" style="height:280px;">
+          <svg></svg>
+        </div>
+      </section>
+    </div>
+    <div class="col-md-10 col-lg-11" ng-if="dispsensShowAll">
+      <section class="widget">
+        <header>
+          <h4>
+            Grafica de los datos sensados
+          </h4>
+        </header>
+        <div id="dispsensChartAll" style="height:280px;">
+          <svg></svg>
+        </div>
+      </section>
+    </div>
+    <div class="col-lg-10 col-xg-10" ng-if="emptyData">
+      <section>
+        <header>
+          <h4>
+            <span class="fw-semi-bold">Datos no disponibles</span>
+          </h4>
+        </header>
+        <div>
+          <li> No hay data sensada de este sensor en este modulo</li>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

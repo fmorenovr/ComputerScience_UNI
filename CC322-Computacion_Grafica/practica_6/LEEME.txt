@@ -1,0 +1,7 @@
+En las imagenes se muestran 2 lineas (Azul y Roja)
+
+La roja, por cada problema es la curva de Bsplie, Casteljau y Boor
+
+La azul, son las uniones de cada par de puntos.
+
+Los carritos fueron echos con Casteljau.

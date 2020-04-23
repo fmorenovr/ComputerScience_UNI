@@ -1,0 +1,1 @@
+0 + 1 * ((sqrt(x) + (x / cos(x))) + ((x * (x - log((sin(x) / sqrt((0.452439 + sin(x))))))) * sqrt(sin(x))))

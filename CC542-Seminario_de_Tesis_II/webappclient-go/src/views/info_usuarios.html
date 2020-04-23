@@ -1,0 +1,44 @@
+<h1 class="page-title">lista de <span class="fw-semi-bold">Usuarios</span></h1>
+<ol class="breadcrumb">
+  <li>Se entuentra en:</li>
+  <li class="active">Info Usuarios</li>
+</ol>
+<section class="container content-section" ng-controller="infoUsuariosController">
+  <div class="row">
+    <div class="col-md-6 col-lg-10">
+      <section class="widget">
+          <header>
+            <h4>
+              Datos de <span class="fw-semi-bold">Usuarios</span>
+            </h4>
+          </header>
+          <div class="widget-body">
+            <table class="table table-condensed table-striped">
+              <thead>
+                <tr>
+                  <th>Id Usuario</th>
+                  <th>Username</th>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Doc Identidad</th>
+                  <th>Email</th>
+                  <th>Fecha de Registro</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="user in usuarios">
+                  <td>{{user.id_usuario}}</td>
+                  <td>{{user.username}}</td>
+                  <td>{{user.nombre}}</td>
+                  <td>{{user.apellido}}</td>
+                  <td>{{user.doc}}</td>
+                  <td>{{user.mail}}</td>
+                  <td>{{user.registration_date}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </section>
+    </div>
+  </div>
+</section>

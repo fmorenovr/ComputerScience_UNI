@@ -1,0 +1,131 @@
+<ol class="breadcrumb">
+  <li>Se entuentra en:</li>
+  <li class="active">Eliminar IoTDevice </li>
+</ol>
+<section class="container content-section" ng-controller="EliminarModuleController">
+  <div class="row">
+    <div class="col-md-8">
+      <!-- minimal widget consist of .widget class. note bg-transparent - it can be any background like bg-gray, bg-primary, bg-white -->
+      <section class="widget"> <!-- ng-controller="GeoLocationsWidgetDemoController" -->
+        <!-- .widget-body is a mostly semantic class. may be a sibling to .widget>header or .widget>footer -->
+        <div class="widget-body">
+          <div class="col-md-2 col-lg-2">
+            <section class="widget">
+              <header>
+                <h4>
+                  Id <span class="fw-semi-bold">{{app.usr}}</span>
+                </h4>
+              </header>
+              <div class="widget-body">
+                <select ng-model="cansat_watch">
+                  <option ng-repeat="cans in listcansats" value="{{cans.id_moduleiot}}">
+                  {{cans.id_moduleiot}}
+                  </option>
+                </select>
+              </div>
+            </section>
+          </div>
+        <!-- for this particular example we also need to preload us map, as this is mapael's extension -->
+          <form id="goform" class="form-horizontal" role="form" ng-submit="eliminar()">
+            <fieldset>
+              <legend><strong>Eliminar</strong></legend>
+              <div class="form-group">
+                <label for="normal-field" class="col-sm-4 control-label">Modelo:</label>
+                <div class="col-sm-7">
+                  <input type="text" id="modelo" class="form-control" placeholder="modelo"
+                         disabled="disabled" data-tooltip-placement="top" data-tooltip="modelo" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="hint-field" class="col-sm-4 control-label"> longuitud :</label>
+                <div class="col-sm-7">
+                  <input type="text" id="longuitud" class="form-control" placeholder="longuitud"
+                         disabled="disabled" data-tooltip-placement="top" data-tooltip="longuitud" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="hint-field" class="col-sm-4 control-label">latitud:</label>
+                <div class="col-sm-7">
+                  <input type="text" id="latitud" class="form-control" placeholder="latitud"
+                         disabled="disabled" data-tooltip-placement="top" data-tooltip="latitud" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label" for="prepended-input">Zona:</label>
+                <div class="col-sm-7">
+                  <input type="text" id="zona" class="form-control" size="16" placeholder="zona"
+                         disabled="disabled" data-tooltip-placement="top" data-tooltip="zona" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label" for="prepended-input">Sector:</label>
+                <div class="col-sm-7">
+                  <input type="text" id="sector" class="form-control" size="16" placeholder="sector"
+                         disabled="disabled" data-tooltip-placement="top" data-tooltip="sector" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label" for="disabled-input">Fecha:</label>
+                <div class="col-sm-7">
+                  <input type="text" id="fecha" class="form-control"
+                         disabled="disabled">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label" for="disabled-input">Hora:</label>
+                <div class="col-sm-7">
+                  <input type="text" id="hora" class="form-control"
+                         disabled="disabled">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label" for="prepended-input">Sensores:</label>
+                <div class="col-sm-7">
+                  <div class="input-group">
+                    <fieldset  data-ng-repeat="choice in list_sensores">
+                      <div><span><br></span></div>
+				              <input type="text" id="tipo_sensor" class="form-control" disabled="disabled"
+				                     ng-model="choice.type" size="16" placeholder="Tipo sensor"
+				                     data-tooltip-placement="top" data-tooltip="Tipo sensor" required>
+				                     
+                      <input type="text" id="modelo_sensor" class="form-control" disabled="disabled"
+                             ng-model="choice.model" placeholder="modelo de sensor"
+                             data-tooltip-placement="top" data-tooltip="modelo" required>
+                      
+                      <input type="text" id="state_sensor" class="form-control" placeholder="State" disabled="disabled"
+                             ng-model="choice.state" data-tooltip-placement="top" data-tooltip="state" required>
+                             
+                      <input type="text" id="unidad_sensor" class="form-control"
+                             disabled="disabled" value="{{choice.unit}}" disabled="disabled"
+                             data-tooltip-placement="top" data-tooltip="unidad">
+                             
+                      <input type="text" id="disabled-input" class="form-control"
+                             disabled="disabled" value="{{app.getDatesSensors(choice.date_installed)[0]}}" data-tooltip-placement="top"
+                             data-tooltip="hora de instalacion">
+                             
+                      <input type="text" id="disabled-input" class="form-control"
+                             disabled="disabled" value="{{app.getDatesSensors(choice.date_installed)[1]}}" data-tooltip-placement="top"
+                             data-tooltip="fecha de instalacion">
+				            </fieldset>
+				          </div>
+				        </div>
+              </div>
+              <span ng-if="mostrar" style="margin: 10px 0px;padding:12px;color: #4F8A10;background-color: #DFF2BF;" class="help-block">
+                <i class="fa fa-check"></i>
+                  Eliminado correctamente
+              </span>
+            </fieldset>
+            <div class="form-actions">
+              <div class="row">
+                <div class="col-sm-offset-4 col-sm-7">
+                  <button type="submit" class="btn btn-primary">Eliminar IoTDevice</button>
+                  <!--<button type="reset" class="btn btn-inverse">Cancelar</button>-->
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

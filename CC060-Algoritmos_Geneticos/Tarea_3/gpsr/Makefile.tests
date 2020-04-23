@@ -1,0 +1,29 @@
+all: global.o rng.o gpoperators.o usefulfunctions.o gpnode.o gpprogram.o gppopulation.o runtests.o
+	g++ -O3 runtests.o gpoperators.o gppopulation.o gpprogram.o gpnode.o usefulfunctions.o global.o rng.o  -o bin/runtests
+
+clean:
+	rm -f *.o bin/runtests bin/runtests.exe *~
+
+runtests.o: src/runtests.cpp
+	g++ -c -O3 src/runtests.cpp
+
+gpoperators.o: src/gpoperators.cpp src/gpoperators.h 
+	g++ -c -O3 src/gpoperators.cpp src/gpoperators.o
+
+gppopulation.o: src/gppopulation.cpp src/gppopulation.h 
+	g++ -c -O3 src/gppopulation.cpp
+
+gpprogram.o: src/gpprogram.cpp src/gpprogram.h 
+	g++ -c -O3 src/gpprogram.cpp
+
+usefulfunctions.o: src/usefulfunctions.cpp src/usefulfunctions.h
+	g++ -c -O3 src/usefulfunctions.cpp
+
+gpnode.o: src/gpnode.cpp src/gpnode.h
+	g++ -c -O3 src/gpnode.cpp
+
+global.o: src/global.cpp src/global.h
+	g++ -c -O3 src/global.cpp
+
+rng.o: src/rng.cpp src/rng.h
+	g++ -c -O3 src/rng.cpp

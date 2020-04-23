@@ -1,0 +1,113 @@
+<h1 class="page-title">Bienvenido <small>{{app.username|decorate}}</small></h1>
+<section class="container content-section" ng-controller="HomeController">
+  <div class="row">
+    <div class="col-md-4 col-lg-3 hidden-xs">
+      <section class="widget">
+        <span class="thumb-ms avatar" align="middle">
+          <div>
+          <img class="img-circle" align="middle" src="/images/avatar.png" alt="..."></img>
+          </div>
+        </span>
+        <form enctype="multipart/form-data" action="/uploadImages" method="post">
+          <div align="middle">
+            <input type="file" name="uploadfile"/>
+            <input class="btn btn-success" type="submit" value="UploadImage" />
+            <input value="{{app.username}}" type="hidden" name="id_user" class="form-control" required />
+          </div>
+        </form>
+      </section>
+    </div>
+    <div class="col-md-4 col-lg-3 visible-xs">
+      <section class="widget">
+        <span class="thumb-ms avatar">
+          <div style="margin-left:25%;">
+          <img class="img-circle" align="middle" src="/images/avatar.png" alt="..."></img>
+          </div>
+        </span>
+        <form enctype="multipart/form-data" action="/uploadImages" method="post" align="middle">
+          <div align="middle">
+            <input type="file" name="uploadfile"/>
+            <input class="btn btn-success" type="submit" value="UploadImage" />
+            <input value="{{app.username}}" type="hidden" name="id_user" class="form-control" required />
+          </div>
+        </form>
+      </section>
+    </div>
+    <div class="col-md-8">
+      <section class="widget">
+        <form id="goform" class="form-horizontal" role="form" ng-submit="actualizar()">
+          <fieldset>
+            <div class="form-group">
+              <label for="normal-field" class="col-sm-4 control-label">Nombres:</label>
+              <div class="col-sm-5">
+                <input type="text" id="nombre" class="form-control" disabled="disabled"
+                       placeholder="nombres" data-tooltip-placement="top" data-tooltip="Nombres" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="hint-field" class="col-sm-4 control-label">Apellidos:</label>
+              <div class="col-sm-5">
+                <input type="text" id="apellido" class="form-control" disabled="disabled"
+                       placeholder="apellidos" data-tooltip-placement="top" data-tooltip="Apellidos" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="hint-field" class="col-sm-4 control-label">Documento de indentidad:<span class="help-block">DNI o Carne de extranjeria</span></label>
+              <div class="col-sm-5">
+                <input type="text" id="documento" class="form-control" placeholder="documento de identidad"
+                       data-tooltip-placement="top" data-tooltip="Documento de Identidad" disabled="disabled" >
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="hint-field" class="col-sm-4 control-label">Email:</label>
+              <div class="col-sm-5">
+                <input type="text" id="email" class="form-control" placeholder="email"
+                       data-tooltip-placement="top" data-tooltip="Email" required>
+                <span ng-if="email_error" style="margin: 10px 0px;padding:12px;color: #D8000C;background-color: #FFBABA;" class="help-block">
+                  <i class="fa fa-times-circle"></i>
+                    Email Incorrecto
+                </span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 control-label" for="prepended-input">Username:</label>
+              <div class="col-sm-5">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                  <input id="username" class="form-control" type="text" placeholder="Username" data-tooltip-placement="top" data-tooltip="Username" required>
+                </div>
+                <span ng-if="username_error" style="margin: 10px 0px;padding:12px;color: #D8000C;background-color: #FFBABA;" class="help-block">
+                  <i class="fa fa-times-circle"></i>
+                    Username no disponible
+                </span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 control-label" for="password-field">Password:</label>
+              <div class="col-sm-5">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                  <input type="{{passwdType}}" id="password" class="form-control"
+                         placeholder="Password" data-tooltip-placement="top" data-tooltip="Password">
+                </div>
+                <button type="button" class="col-sm-8 btn" ng-click="ocultarPasswd()">ver password</button>
+              </div>
+            </div>
+            <span ng-if="mostrar" style="margin: 10px 0px;padding:12px;color: #4F8A10;background-color: #DFF2BF;" class="help-block">
+              <i class="fa fa-check"></i>
+                Modificado correctamente
+            </span>
+          </fieldset>
+          <div class="form-actions">
+            <div class="row">
+              <div class="col-sm-offset-4 col-sm-7">
+                <button type="submit" class="btn btn-primary">Actualizar Datos</button>
+                <!--<button type="reset" class="btn btn-inverse">Cancelar</button>-->
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+</section>
