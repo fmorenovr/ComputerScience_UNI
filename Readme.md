@@ -1,6 +1,7 @@
 # B.Sc. in Computer Science
 
-Cursos realizados para obtener el grado de **Bachiller en Ciencia de la Computación** ofrecidos por la [Facultad de Ciencias (FC)](https://fc.uni.edu.pe/fc/) en la [Escuela Profesional de Ciencia de la Computación (EPCC)](https://fc.uni.edu.pe/fc/index.php/escuelas/ciencia-de-la-computacion) de la [Universidad Nacional de Ingeniería (UNI)](https://www.uni.edu.pe/) desde el 2012 hasta el 2017. Lima - Perú.
+Cursos realizados para obtener el grado de **Bachiller en Ciencia de la Computación** ofrecidos por la la [Escuela Profesional de Ciencia de la Computación (EPCC)](https://fc.uni.edu.pe/fc/index.php/escuelas/ciencia-de-la-computacion) de la [Facultad de Ciencias (FC)](https://fc.uni.edu.pe/fc/) en la [Universidad Nacional de Ingeniería (UNI)](https://www.uni.edu.pe/) desde el 2012 hasta el 2017. Lima - Perú.
+
 
 ## Periodo 2012-I:
 
